@@ -1,0 +1,4 @@
+#ifndef SRC_S21_SMARTCALC_H_
+#define SRC_S21_SMARTCALC_H_
+
+#endif  // SRC_S21_SMARTCALC_H_
