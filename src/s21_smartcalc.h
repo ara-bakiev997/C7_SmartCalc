@@ -30,12 +30,19 @@ typedef enum {
   LOG = 21
 } type_t;
 
-typedef struct {
+typedef struct list list;
+struct {
   double value;
   int priority;
   type_t type;
-  struct list* next;
+  list* next;
 } list;
+// typedef struct {
+//   double value;
+//   int priority;
+//   type_t type;
+//   struct list* next;
+// } list;
 
 /*__________________LIST_WORK_FUNCTIONS__________________*/
 list* initList(double value);

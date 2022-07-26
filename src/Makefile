@@ -1,4 +1,4 @@
-GCC = gcc -Wall -Werror -Wextra -std=c11 -g
+GCC = gcc  -std=c11 -g # -Werror -Wextra -Wall
 SOURCE = s21_*.c
 OBJ = $(SOURCE:.c=.o)
 GCOVFLAGS=-L. --coverage
