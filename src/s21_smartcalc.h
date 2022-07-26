@@ -31,12 +31,12 @@ typedef enum {
 } type_t;
 
 typedef struct list list;
-struct {
+struct list {
   double value;
   int priority;
   type_t type;
   list* next;
-} list;
+};
 // typedef struct {
 //   double value;
 //   int priority;
@@ -45,6 +45,6 @@ struct {
 // } list;
 
 /*__________________LIST_WORK_FUNCTIONS__________________*/
-list* initList(double value);
+void printStek(list* src);
 
 #endif  // SRC_S21_SMARTCALC_H_

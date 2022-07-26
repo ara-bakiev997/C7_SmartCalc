@@ -1,16 +1,20 @@
 #include "s21_smartcalc.h"
 
 int main() {
+  list* start = NULL;
   list a = {2}, b = {1}, c = {4};
-  list* start = &a;
+  start = &a;
   a.next = &b;
   b.next = &c;
   c.next = NULL;
-  for (list* p = list; p != NULL; p = p->next) {
+  printStek(start);
+  return 0;
+}
+
+void printStek(list* src) {
+  for (list* p = src; p != NULL; p = p->next) {
     printf("%lf\n", p->value);
   }
-
-  return 0;
 }
 
 // list* initList(double value) {
