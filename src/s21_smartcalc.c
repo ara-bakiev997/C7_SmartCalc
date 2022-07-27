@@ -5,15 +5,15 @@ int main() {
   double str[] = {1.0, 2.0, 3.0};
   for (int i = 0; str[i]; i++) {
     push(&start, str[i]);
-    // printStek(start);
-    printf("\n");
-  }
-  for (int i = 0; str[i]; i++) {
-    // pop(&start);
-    printf("%lf\n", pop(&start));
     printStek(start);
     printf("\n");
   }
+  // for (int i = 0; str[i]; i++) {
+  //   // pop(&start);
+  //   // printf("%lf\n", pop(&start));
+  //   // printStek(start);
+  //   printf("\n");
+  // }
   // printf("Node = %lf\n", start->value);
   // Node a = {2}, b = {1}, c = {4};
   // start = &a;
@@ -56,10 +56,9 @@ Node* new_node(double value) {
 double peek(Node* src) { return src->value; }
 
 void printStek(Node* src) {
-  int i = 0;
-  for (Node* p = src; p != NULL; p = p->next, i++) {
-    printf("Node %d = %lf\n", i, p->value);
-    printf("This %d = %p\n", i, &p);
-    printf("Next %d = %p\n", i, p->next);
+  for (Node* p = src; p != NULL; p = p->next) {
+    printf("Value = %lf\n", p->value);
+    printf("Adress list= %p\n", p);
+    printf("Next = %p\n", p->next);
   }
 }
