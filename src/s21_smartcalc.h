@@ -30,21 +30,18 @@ typedef enum {
   LOG = 21
 } type_t;
 
-typedef struct list list;
-struct list {
+typedef struct Node_s {
   double value;
   int priority;
   type_t type;
-  list* next;
-};
-// typedef struct {
-//   double value;
-//   int priority;
-//   type_t type;
-//   struct list* next;
-// } list;
+  struct Node_s* next;
+} Node;
 
 /*__________________LIST_WORK_FUNCTIONS__________________*/
-void printStek(list* src);
+void push(Node** list, double value);
+double pop(Node** list);
+void printStek(Node* src);
+Node* new_node(double src);
+double peek(Node* src);
 
 #endif  // SRC_S21_SMARTCALC_H_
