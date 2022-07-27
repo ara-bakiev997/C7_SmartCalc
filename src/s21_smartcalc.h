@@ -40,8 +40,8 @@ typedef struct Node_s {
 /*__________________LIST_WORK_FUNCTIONS__________________*/
 void push(Node** plist, double value);
 double pop(Node** plist);
-void printStek(Node* src);
 Node* new_node(double src);
 double peek(Node* src);
+void printStek(Node* src);
 
 #endif  // SRC_S21_SMARTCALC_H_

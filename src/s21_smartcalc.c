@@ -24,15 +24,6 @@ int main() {
   return 0;
 }
 
-void printStek(Node* src) {
-  int i = 0;
-  for (Node* p = src; p != NULL; p = p->next, i++) {
-    printf("Node %d = %lf\n", i, p->value);
-    printf("This %d = %p\n", i, &p);
-    printf("Next %d = %p\n", i, p->next);
-  }
-}
-
 void push(Node** plist, double value) {
   Node* tmp = new_node(value);
   if (tmp) {
@@ -60,4 +51,15 @@ Node* new_node(double value) {
     tmp->next = NULL;
   }
   return tmp;
+}
+
+double peek(Node* src) { return src->value; }
+
+void printStek(Node* src) {
+  int i = 0;
+  for (Node* p = src; p != NULL; p = p->next, i++) {
+    printf("Node %d = %lf\n", i, p->value);
+    printf("This %d = %p\n", i, &p);
+    printf("Next %d = %p\n", i, p->next);
+  }
 }
