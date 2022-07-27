@@ -38,8 +38,8 @@ typedef struct Node_s {
 } Node;
 
 /*__________________LIST_WORK_FUNCTIONS__________________*/
-void push(Node** list, double value);
-double pop(Node** list);
+void push(Node** plist, double value);
+double pop(Node** plist);
 void printStek(Node* src);
 Node* new_node(double src);
 double peek(Node* src);

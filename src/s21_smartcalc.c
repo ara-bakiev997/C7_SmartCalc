@@ -5,12 +5,12 @@ int main() {
   double str[] = {1.0, 2.0, 3.0};
   for (int i = 0; str[i]; i++) {
     push(&start, str[i]);
-    printStek(start);
+    // printStek(start);
     printf("\n");
   }
   for (int i = 0; str[i]; i++) {
-    pop(&start);
-    // printf("%lf", pop(&start));
+    // pop(&start);
+    printf("%lf\n", pop(&start));
     printStek(start);
     printf("\n");
   }
@@ -33,20 +33,20 @@ void printStek(Node* src) {
   }
 }
 
-void push(Node** list, double value) {
+void push(Node** plist, double value) {
   Node* tmp = new_node(value);
   if (tmp) {
-    tmp->next = *list;
-    *list = tmp;
+    tmp->next = *plist;
+    *plist = tmp;
   }
 }
 
-double pop(Node** list) {
+double pop(Node** plist) {
   double delete;
-  if (*list) {
-    Node* tmp = *list;
-    delete = *list->value;
-    *list = *list->next;
+  if (*plist) {
+    Node* tmp = *plist;
+    delete = tmp->value;
+    *plist = tmp->next;
     free(tmp);
   }
   return delete;
