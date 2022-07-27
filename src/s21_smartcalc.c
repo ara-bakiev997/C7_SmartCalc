@@ -8,6 +8,12 @@ int main() {
     printStek(start);
     printf("\n");
   }
+  for (int i = 0; str[i]; i++) {
+    pop(&start);
+    // printf("%lf", pop(&start));
+    printStek(start);
+    printf("\n");
+  }
   // printf("Node = %lf\n", start->value);
   // Node a = {2}, b = {1}, c = {4};
   // start = &a;
@@ -35,6 +41,17 @@ void push(Node** list, double value) {
   }
 }
 
+double pop(Node** list) {
+  double delete;
+  if (*list) {
+    Node* tmp = *list;
+    delete = *list->value;
+    *list = *list->next;
+    free(tmp);
+  }
+  return delete;
+}
+
 Node* new_node(double value) {
   Node* tmp;
   tmp = (Node*)malloc(sizeof(Node));
@@ -44,11 +61,3 @@ Node* new_node(double value) {
   }
   return tmp;
 }
-
-// void push(Node** src, double value) {
-//   Node* tmp;
-//   tmp = (Node*)malloc(sizeof(Node));
-//   if (tmp) {
-//     src
-//   }
-// }
