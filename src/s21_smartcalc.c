@@ -3,22 +3,16 @@
 int main() {
   char buf[256] = "(1+4) * 2";
   int error = 0;
-  for (int i = 0; buf[i] != '\0' && !error; i++) {
-    int bracketOpen = 0, bracketClose = 0;
-    char prev;
-    if (i != 0) prev = buf[i - 1];
-    if (buf[i] == '(') {
-      bracketOpen++;
-    }
-    if (buf[i] == ')') {
-      bracketClose++;
-    }
-    error = (bracketOpen < bracketClose) ? 1 : 0;
-    if ((prev == '(' && (buf[i] == '*' || buf[i] == '/' || buf[i] == '^')) ||
-        (buf[0] == '*' || buf[0] == '/' || buf[0] == '^')) {
-      error = 1;
-    }
-  }
+  error = validation(buf);
+
+  // int c, b;
+  // b = strspn(&buf[i], check);
+  // c = !!strspn(&next, checkNum);
+  // if ((buf[i] == '*' || buf[i] == '/' || buf[i] == '^' || buf[i] == '+' ||
+  //      buf[i] == '-') &&
+  //     !strspn(next, checkNum))
+  //   error = 1;
+
   printf("%s\n", (error) ? "ERROR" : "OK");
   return 0;
 }
@@ -55,6 +49,34 @@ Node* newNode(double value) {
     tmp->next = NULL;
   }
   return tmp;
+}
+
+int validation(char src[256]) {
+  int error = 0;
+  int bracketOpen = 0, bracketClose = 0;
+  for (int i = 0; src[i] != '\0' && !error; i++) {
+    char prev;
+    char next[1] = "";
+    next[0] = src[i + 1];
+    char check[] = "+-*/^";
+    char checkNum[] = "0123456789(";
+    if (i != 0) prev = src[i - 1];
+    if (src[i] == '(') {
+      bracketOpen++;
+    }
+    if (src[i] == ')') {
+      bracketClose++;
+    }
+    if (bracketOpen < bracketClose) error = 1;
+    if (i == (strlen(src) - 1) && bracketOpen != bracketClose) {
+      error = 1;
+    }
+    if ((prev == '(' && (src[i] == '*' || src[i] == '/' || src[i] == '^')) ||
+        (src[0] == '*' || src[0] == '/' || src[0] == '^')) {
+      error = 1;
+    }
+  }
+  return error;
 }
 
 /*___________________PRINT_FUNCTIONS__________________*/

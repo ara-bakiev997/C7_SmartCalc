@@ -17,8 +17,8 @@ typedef enum {
   DIV = 8,
   POW = 9,
   MOD = 10,
-  UNA = 11,
-  UNA = 12,
+  UPLUS = 11,
+  UMINUS = 12,
   COS = 13,
   SIN = 14,
   TAN = 15,
@@ -43,6 +43,7 @@ double pop(Node** plist);
 int isEmpty(Node* src);
 double peek(Node* src);
 Node* newNode(double src);
+int validation(char src[256]);
 
 /*___________________PRINT_FUNCTIONS__________________*/
 void printStek(Node* src);
