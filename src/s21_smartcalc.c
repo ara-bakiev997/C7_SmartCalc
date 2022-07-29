@@ -1,28 +1,25 @@
 #include "s21_smartcalc.h"
 
 int main() {
-  Node* start = NULL;
-  double str[] = {1.0, 2.0, 3.0};
-  for (int i = 0; str[i]; i++) {
-    push(&start, str[i]);
-    printStek(start);
-    printf("\n");
+  char buf[256] = "(1+4) * 2";
+  int error = 0;
+  for (int i = 0; buf[i] != '\0' && !error; i++) {
+    int bracketOpen = 0, bracketClose = 0;
+    char prev;
+    if (i != 0) prev = buf[i - 1];
+    if (buf[i] == '(') {
+      bracketOpen++;
+    }
+    if (buf[i] == ')') {
+      bracketClose++;
+    }
+    error = (bracketOpen < bracketClose) ? 1 : 0;
+    if ((prev == '(' && (buf[i] == '*' || buf[i] == '/' || buf[i] == '^')) ||
+        (buf[0] == '*' || buf[0] == '/' || buf[0] == '^')) {
+      error = 1;
+    }
   }
-  printf("EMPTY = %s\n\n", isEmpty(start) ? "YES" : "NO");
-  for (int i = 0; str[i]; i++) {
-    // pop(&start);
-    printf("POP =%lf\n", pop(&start));
-    printStek(start);
-    printf("\n");
-  }
-  printf("EMPTY = %s\n\n", isEmpty(start) ? "YES" : "NO");
-  // printf("Node = %lf\n", start->value);
-  // Node a = {2}, b = {1}, c = {4};
-  // start = &a;
-  // a.next = &b;
-  // b.next = &c;
-  // c.next = NULL;
-  // printStek(start);
+  printf("%s\n", (error) ? "ERROR" : "OK");
   return 0;
 }
 
@@ -69,3 +66,20 @@ void printStek(Node* src) {
     printf("Next = %p\n", p->next);
   }
 }
+
+/*___________________STEK_WORK___________________*/
+//  Node* start = NULL;
+// double str[] = {1.0, 2.0, 3.0};
+// for (int i = 0; str[i]; i++) {
+//   push(&start, str[i]);
+//   printStek(start);
+//   printf("\n");
+// }
+// printf("EMPTY = %s\n\n", isEmpty(start) ? "YES" : "NO");
+// for (int i = 0; str[i]; i++) {
+//   // pop(&start);
+//   printf("POP =%lf\n", pop(&start));
+//   printStek(start);
+//   printf("\n");
+// }
+// printf("EMPTY = %s\n\n", isEmpty(start) ? "YES" : "NO");
