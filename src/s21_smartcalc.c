@@ -8,12 +8,14 @@ int main() {
     printStek(start);
     printf("\n");
   }
-  // for (int i = 0; str[i]; i++) {
-  //   // pop(&start);
-  //   // printf("%lf\n", pop(&start));
-  //   // printStek(start);
-  //   printf("\n");
-  // }
+  printf("EMPTY = %s\n\n", isEmpty(start) ? "YES" : "NO");
+  for (int i = 0; str[i]; i++) {
+    // pop(&start);
+    printf("POP =%lf\n", pop(&start));
+    printStek(start);
+    printf("\n");
+  }
+  printf("EMPTY = %s\n\n", isEmpty(start) ? "YES" : "NO");
   // printf("Node = %lf\n", start->value);
   // Node a = {2}, b = {1}, c = {4};
   // start = &a;
@@ -24,8 +26,9 @@ int main() {
   return 0;
 }
 
+/*__________________STEK_WORK_FUNCTIONS__________________*/
 void push(Node** plist, double value) {
-  Node* tmp = new_node(value);
+  Node* tmp = newNode(value);
   if (tmp) {
     tmp->next = *plist;
     *plist = tmp;
@@ -43,7 +46,11 @@ double pop(Node** plist) {
   return delete;
 }
 
-Node* new_node(double value) {
+int isEmpty(Node* src) { return src == NULL; }
+
+double peek(Node* src) { return src->value; }
+
+Node* newNode(double value) {
   Node* tmp;
   tmp = (Node*)malloc(sizeof(Node));
   if (tmp) {
@@ -53,7 +60,7 @@ Node* new_node(double value) {
   return tmp;
 }
 
-double peek(Node* src) { return src->value; }
+/*___________________PRINT_FUNCTIONS__________________*/
 
 void printStek(Node* src) {
   for (Node* p = src; p != NULL; p = p->next) {

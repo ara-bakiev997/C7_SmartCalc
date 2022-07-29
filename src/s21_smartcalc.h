@@ -37,11 +37,15 @@ typedef struct Node_s {
   struct Node_s* next;
 } Node;
 
-/*__________________LIST_WORK_FUNCTIONS__________________*/
+/*__________________STEK_WORK_FUNCTIONS__________________*/
 void push(Node** plist, double value);
 double pop(Node** plist);
-Node* new_node(double src);
+int isEmpty(Node* src);
 double peek(Node* src);
+Node* newNode(double src);
+
+/*___________________PRINT_FUNCTIONS__________________*/
 void printStek(Node* src);
+Node* fillUp(double* str);
 
 #endif  // SRC_S21_SMARTCALC_H_
