@@ -1,13 +1,15 @@
 #include "s21_smartcalc.h"
 
 int main() {
-  char buf[256] = "((1+4)) +2 *2";
-  int error = 0;
-  error = validation(buf);
-  if (!error) {
-  }
+  // char *str = "9.235+sin(10)-564-28.6*35mod99.7^2";
+  char* str = "2-(6-6)";
+  // создаем указатели для "очереди"
+  Node *front = NULL, *rear = NULL;
+  parserStrToQue(&rear, &front, str);
+  double res = calculateExpression(&rear, &front);
+  printf("EXPRESSION= %s\n", str);
+  printf("RESULT= %lf\n", res);
 
-  printf("%s\n", (error) ? "ERROR" : "OK");
   return 0;
 }
 
@@ -50,13 +52,6 @@ int validation(char src[256]) {
       error = 1;
     }
     if (src[i] == '(' && next == ')') error = 1;
-    // int c, b;
-    // b = strspn(&buf[i], check);
-    // c = !!strspn(&next, checkNum);
-    // if ((buf[i] == '*' || buf[i] == '/' || buf[i] == '^' || buf[i] == '+' ||
-    //      buf[i] == '-') &&
-    //     !strspn(next, checkNum))
-    //   error = 1;
   }
   return error;
 }
@@ -64,22 +59,125 @@ int validation(char src[256]) {
 char peekCh(char* string) { return *string; }
 
 int checkNumber(char* str) {
-  int count_dot = 0;
+  int countDot = 0;
   char c;
   int err = 0;
   while (*str) {
-    c = peek_ch(str);
+    c = peekCh(str);
     if (isdigit(c) || ((c == '.'))) {
-      if (c == '.') count_dot++;
-      // printf("simbollll: %c\n", c);
+      if (c == '.') countDot++;
+
     } else {
       break;
     }
     str++;
   }
-  if (count_dot > 1) err = 1;
+  if (countDot > 1) err = 1;
   return err;
 }
+
+void parserStrToQue(Node** rear, Node** front, char* str) {
+  while (*str) {
+    if (isdigit(peekCh(str))) {
+      parserDigitFromStrToQue(rear, front, &str);
+    } else {
+      enqueueOp(rear, front, &str);
+      printStek(*rear);
+    }
+  }
+}
+
+void parserDigitFromStrToQue(Node** rear, Node** front, char** str) {
+  double d;
+  if (!checkNumber(*str)) {
+    d = strtod((const char*)*str, str);
+    pushEnqueue(rear, front, d);
+    (*rear)->priority = NUMBER;
+    (*rear)->type = NUMBER;
+    printf("digit: %lf\n", d);
+    printStek(*rear);
+  } else {
+    printf("incorrect input\n");
+    exit(EXIT_FAILURE);
+  }
+}
+
+/*__________________CALCUCATE_FUNCTIONS__________________*/
+double calculateExpression(Node** rear, Node** front) {
+  Node *stackNum = NULL, *stackOp = NULL;
+  double d, num1, num2, op, result;
+  int precedence = 0;
+  while (*front) {
+    if ((*front)->type == OPERATOR) {
+      precedence = (*front)->priority;
+      d = popEqueue(rear, front);
+      while (1) {
+        if (isEmpty(stackOp)) {
+          pushStack(&stackOp, d);
+          stackOp->priority = precedence;
+          break;
+        } else if ((int)d == BKT_OP) {
+          pushStack(&stackOp, d);
+          stackOp->priority = precedence;
+          break;
+        } else if ((int)d == BKT_CL) {
+          while (!((int)peek(stackOp) == BKT_OP)) {
+            op = popStack(&stackOp);
+            num2 = popStack(&stackNum);
+            num1 = popStack(&stackNum);
+            result = calcRes(num1, num2, op);
+            pushStack(&stackNum, result);
+          }
+          popStack(&stackOp);
+          break;
+        } else if (precedence > stackOp->priority) {
+          pushStack(&stackOp, d);
+          stackOp->priority = precedence;
+          break;
+        } else {
+          op = popStack(&stackOp);
+          num2 = popStack(&stackNum);
+          num1 = popStack(&stackNum);
+          result = calcRes(num1, num2, op);
+          pushStack(&stackNum, result);
+        }
+      }
+    } else {
+      d = popEqueue(rear, front);
+      pushStack(&stackNum, d);
+      stackNum->priority = NUMBER;
+      if (isEmpty(*front)) {
+        while (!isEmpty(stackOp)) {
+          op = popStack(&stackOp);
+          num2 = popStack(&stackNum);
+          num1 = popStack(&stackNum);
+          result = calcRes(num1, num2, op);
+          pushStack(&stackNum, result);
+        }
+      }
+    }
+  }
+  printf("\n\nstack numbers:\n");
+  printStek(stackNum);
+  printf("\noperators:\n");
+  printStek(stackOp);
+  return popStack(&stackNum);
+}
+
+double calcRes(double num1, double num2, int op) {
+  double result = 0;
+  if (op == PLUS) result = sum(num1, num2);
+  if (op == MINUS) result = sub(num1, num2);
+  if (op == MULT) result = mul(num1, num2);
+  if (op == DIV) result = division(num1, num2);
+  if (op == MOD) result = fmod(num1, num2);
+  return result;
+}
+
+double sum(double num1, double num2) { return num1 + num2; }
+double sub(double num1, double num2) { return num1 - num2; }
+double mul(double num1, double num2) { return num1 * num2; }
+double division(double num1, double num2) { return num1 / num2; }
 
 /*__________________STEK_WORK_FUNCTIONS__________________*/
 void pushStack(Node** plist, double value) {
@@ -111,6 +209,52 @@ void pushEnqueue(Node** rear, Node** front, double digit) {
     (*rear)->next = tmp;
     *rear = tmp;
   }
+}
+
+double popEqueue(Node** rear, Node** front) {
+  if (*front == NULL) {
+    printf("\n Queue underflow");
+    exit(EXIT_FAILURE);
+  }
+  Node* pDel = *front;
+  *front = (*front)->next;
+  if (*front == NULL) {
+    *rear = NULL;
+  }
+  double d = pDel->value;
+  free(pDel);
+  return d;
+}
+
+void enqueueOp(Node** rear, Node** front, char** str) {
+  char* strF[] = {"sin",  "cos",  "tan", "log", "asin", "acos",
+                  "atan", "sqrt", "ln",  "mod", "+",    "-",
+                  "*",    "/",    "^",   "(",   ")"};
+  int index = -1;
+  for (size_t i = 0; i < SIZE_ARRAY; i++) {
+    if (!strncmp(*str, strF[i], 3) || !strncmp(*str, strF[i], 4) ||
+        !strncmp(*str, strF[i], 2) || !strncmp(*str, strF[i], 1)) {
+      index = (int)i;
+      break;
+    }
+  }
+  pushEnqueue(rear, front, index);
+  char c = peekCh(strF[index]);
+  if (c == '(') {
+    (*rear)->priority = 0;
+  } else if (c == '+' || c == '-') {
+    (*rear)->priority = 1;
+  } else if (c == '*' || c == '/' || c == 'm') {
+    (*rear)->priority = 2;
+  } else if (c == '^') {
+    (*rear)->priority = 3;
+  } else if (c == ')') {
+    (*rear)->priority = 5;
+  } else {
+    (*rear)->priority = 4;
+  }
+  (*rear)->type = OPERATOR;
+  *str += strlen(strF[index]);
 }
 
 /*___________________PRINT_FUNCTIONS__________________*/
