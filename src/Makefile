@@ -27,7 +27,7 @@ test_:
 
 git:
 	git add Makefile s21_smartcalc_test.c s21_smartcalc.c s21_smartcalc.h
-	git commit -m "calc++"
+	git commit -m "calc_work"
 	git push origin develop
 
 s21_smartcalc.a: clean $(OBJ)

@@ -2,7 +2,7 @@
 
 int main() {
   // char *str = "9.235+sin(10)-564-28.6*35mod99^2";
-  char* str = "1+(-9)";
+  char* str = "";
   // создаем указатели для "очереди"
   Node *front = NULL, *rear = NULL;
   parserStrToQue(&rear, &front, str);
@@ -81,6 +81,7 @@ void parserStrToQue(Node** rear, Node** front, char* str) {
   while (*str) {
     if (isdigit(peekCh(str))) {
       parserDigitFromStrToQue(rear, front, &str);
+      numIn++;
     } else {
       enqueueOp(rear, front, &str, &numIn);
       printStek(*rear);
