@@ -273,7 +273,7 @@ void enqueueOp(Node** rear, Node** front, char** str, int* numIn) {
   char* strF[] = {"sin",  "cos",  "tan", "log", "asin", "acos",
                   "atan", "sqrt", "ln",  "mod", "+",    "-",
                   "*",    "/",    "^",   "(",   ")"};
-  int index = -1, unary = 0, bcktOpen = 0;
+  int index = -1, unary = 0;
   for (size_t i = 0; i < SIZE_ARRAY; i++) {
     if (!strncmp(*str, strF[i], 3) || !strncmp(*str, strF[i], 4) ||
         !strncmp(*str, strF[i], 2) || !strncmp(*str, strF[i], 1)) {
@@ -281,7 +281,7 @@ void enqueueOp(Node** rear, Node** front, char** str, int* numIn) {
       if ((peekCh(strF[i]) == '-')) {
         if (*numIn == 0) {
           unary = 1;
-        } else if (peekCh(*(str - 1)) == '(') {
+        } else if ((*rear)->value == BKT_OP && (*rear)->priority == 0) {
           unary = 1;
         }
       }
@@ -292,7 +292,6 @@ void enqueueOp(Node** rear, Node** front, char** str, int* numIn) {
   char c = peekCh(strF[index]);
   if (c == '(') {
     (*rear)->priority = 0;
-    bcktOpen = 1;
   } else if ((c == '+' || c == '-') && !unary) {
     (*rear)->priority = 1;
   } else if (c == '*' || c == '/' || c == 'm') {
