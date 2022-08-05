@@ -1,12 +1,12 @@
 #include "s21_smartcalc.h"
 
 int main() {
-  // char *str = "9.235+sin(10)-564-28.6*35mod99.7^2";
-  char* str = "2-(6-6)";
+  // char *str = "9.235+sin(10)-564-28.6*35mod99^2";
+  char* str = "9.235-564-28.6*35mod99^2";
   // создаем указатели для "очереди"
   Node *front = NULL, *rear = NULL;
   parserStrToQue(&rear, &front, str);
-  double res = calculateExpression(&rear, &front);
+  double res = resolution(&rear, &front);
   printf("EXPRESSION= %s\n", str);
   printf("RESULT= %lf\n", res);
 
@@ -103,74 +103,114 @@ void parserDigitFromStrToQue(Node** rear, Node** front, char** str) {
 }
 
 /*__________________CALCUCATE_FUNCTIONS__________________*/
-double calculateExpression(Node** rear, Node** front) {
-  Node *stackNum = NULL, *stackOp = NULL;
-  double d, num1, num2, op, result;
-  int precedence = 0;
+double resolution(Node** rear, Node** front) {
+  Node *stack_n = NULL, *stack_op = NULL;
+  double d;
+  int priority = 0;
   while (*front) {
     if ((*front)->type == OPERATOR) {
-      precedence = (*front)->priority;
+      priority = (*front)->priority;
       d = popEqueue(rear, front);
-      while (1) {
-        if (isEmpty(stackOp)) {
-          pushStack(&stackOp, d);
-          stackOp->priority = precedence;
-          break;
-        } else if ((int)d == BKT_OP) {
-          pushStack(&stackOp, d);
-          stackOp->priority = precedence;
-          break;
-        } else if ((int)d == BKT_CL) {
-          while (!((int)peek(stackOp) == BKT_OP)) {
-            op = popStack(&stackOp);
-            num2 = popStack(&stackNum);
-            num1 = popStack(&stackNum);
-            result = calcRes(num1, num2, op);
-            pushStack(&stackNum, result);
-          }
-          popStack(&stackOp);
-          break;
-        } else if (precedence > stackOp->priority) {
-          pushStack(&stackOp, d);
-          stackOp->priority = precedence;
-          break;
-        } else {
-          op = popStack(&stackOp);
-          num2 = popStack(&stackNum);
-          num1 = popStack(&stackNum);
-          result = calcRes(num1, num2, op);
-          pushStack(&stackNum, result);
-        }
-      }
+      calculateExpression(&stack_n, &stack_op, d, priority);
+      d = -1;
     } else {
       d = popEqueue(rear, front);
-      pushStack(&stackNum, d);
-      stackNum->priority = NUMBER;
-      if (isEmpty(*front)) {
-        while (!isEmpty(stackOp)) {
-          op = popStack(&stackOp);
-          num2 = popStack(&stackNum);
-          num1 = popStack(&stackNum);
-          result = calcRes(num1, num2, op);
-          pushStack(&stackNum, result);
-        }
+      pushStack(&stack_n, d);
+      stack_n->priority = NUMBER;
+      d = -1;
+    }
+  }
+  while (!isEmpty(stack_op)) {
+    priority = stack_op->priority;
+    calculateExpression(&stack_n, &stack_op, d, priority);
+  }
+
+  printf("\n\nstack numbers:\n");
+  printStek(stack_n);
+  printf("\nstack operators:\n\n");
+  printStek(stack_op);
+  return popStack(&stack_n);
+}
+
+double calculateExpression(Node** stack_n, Node** stack_op, double d,
+                           int priority) {
+  double result;
+  if (isEmpty(*stack_op)) {
+    pushStack(stack_op, d);
+    (*stack_op)->priority = priority;
+  } else if ((int)d == BKT_OP) {
+    pushStack(stack_op, d);
+    (*stack_op)->priority = priority;
+  } else if ((int)d == BKT_CL) {
+    while (!((int)peek(*stack_op) == BKT_OP)) {
+      if ((*stack_op)->priority == 4) {
+        // pushStack(stack_op, peek(*stack_op));
+        result = calcUnaryStack(stack_op, stack_n);
+        pushStack(stack_n, result);
+      } else {
+        result = calcBinaryStack(stack_op, stack_n);
+        pushStack(stack_n, result);
+      }
+    }
+    popStack(stack_op);
+  } else {
+    if ((int)d == POW && peek(*stack_op) == POW) {
+      pushStack(stack_op, d);
+    } else if ((*stack_op)->priority == 4) {
+      // pushStack(stack_op, d);
+      result = calcUnaryStack(stack_op, stack_n);
+      pushStack(stack_n, result);
+
+    } else {
+      while (priority <= (*stack_op)->priority) {
+        result = calcBinaryStack(stack_op, stack_n);
+        pushStack(stack_n, result);
+        if (isEmpty(*stack_op)) break;
+      }
+      if (d != -1) {
+        pushStack(stack_op, d);
+        (*stack_op)->priority = priority;
       }
     }
   }
-  printf("\n\nstack numbers:\n");
-  printStek(stackNum);
-  printf("\noperators:\n");
-  printStek(stackOp);
-  return popStack(&stackNum);
+  return 0;
 }
 
-double calcRes(double num1, double num2, int op) {
+double calcBinaryStack(Node** stack_op, Node** stack_n) {
+  double op = popStack(stack_op);
+  double num2 = popStack(stack_n);
+  double num1 = popStack(stack_n);
+  return calcBinaryRes(num1, num2, op);
+}
+
+double calcBinaryRes(double num1, double num2, int op) {
   double result = 0;
   if (op == PLUS) result = sum(num1, num2);
   if (op == MINUS) result = sub(num1, num2);
   if (op == MULT) result = mul(num1, num2);
   if (op == DIV) result = division(num1, num2);
   if (op == MOD) result = fmod(num1, num2);
+  if (op == POW) result = pow(num1, num2);
+  return result;
+}
+
+double calcUnaryStack(Node** stack_op, Node** stack_n) {
+  double op = popStack(stack_op);
+  double num = popStack(stack_n);
+  return calcUnaryRes(num, op);
+}
+
+double calcUnaryRes(double num, int op) {
+  double result = 0;
+  if (op == SIN) result = sin(num);
+  if (op == COS) result = cos(num);
+  if (op == TAN) result = tan(num);
+  if (op == LOG) result = log10(num);
+  if (op == ASIN) result = asin(num);
+  if (op == ACOS) result = acos(num);
+  if (op == ATAN) result = atan(num);
+  if (op == SQRT) result = sqrt(num);
+  if (op == LN) result = log(num);
   return result;
 }
 
@@ -230,19 +270,25 @@ void enqueueOp(Node** rear, Node** front, char** str) {
   char* strF[] = {"sin",  "cos",  "tan", "log", "asin", "acos",
                   "atan", "sqrt", "ln",  "mod", "+",    "-",
                   "*",    "/",    "^",   "(",   ")"};
-  int index = -1;
+  int index = -1, unary = 0;
   for (size_t i = 0; i < SIZE_ARRAY; i++) {
     if (!strncmp(*str, strF[i], 3) || !strncmp(*str, strF[i], 4) ||
         !strncmp(*str, strF[i], 2) || !strncmp(*str, strF[i], 1)) {
       index = (int)i;
+      // if (peekCh(strF[i]) == '-' && (!strF[i - 1])) {
+      //   unary = 1;
+      // }
       break;
     }
+  }
+  if (unary) {
+    index = (peekCh(strF[index]) == '-') ? 20 : 21;
   }
   pushEnqueue(rear, front, index);
   char c = peekCh(strF[index]);
   if (c == '(') {
     (*rear)->priority = 0;
-  } else if (c == '+' || c == '-') {
+  } else if ((c == '+' || c == '-') && !unary) {
     (*rear)->priority = 1;
   } else if (c == '*' || c == '/' || c == 'm') {
     (*rear)->priority = 2;

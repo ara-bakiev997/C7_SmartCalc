@@ -27,7 +27,9 @@ typedef enum {
   BKT_CL,
   OPERATOR,
   NUMBER,
-  X
+  X,
+  U_MINUS,
+  U_PLUS
 } type_t;
 
 typedef struct Node_s {
@@ -50,7 +52,13 @@ void parserStrToQue(Node** rear, Node** front, char* str);
 void parserDigitFromStrToQue(Node** rear, Node** front, char** str);
 
 /*__________________CALCUCATE_FUNCTIONS__________________*/
-double calculateExpression(Node** rear, Node** front);
+double calculateExpression(Node** stack_n, Node** stack_op, double d,
+                           int precedence);
+double resolution(Node** rear, Node** front);
+double calcBinaryStack(Node** stack_op, Node** stack_n);
+double calcBinaryRes(double num1, double num2, int op);
+double calcUnaryStack(Node** stack_op, Node** stack_n);
+double calcUnaryRes(double num, int op);
 double calcRes(double num1, double num2, int op);
 double sum(double num1, double num2);
 double sub(double num1, double num2);
