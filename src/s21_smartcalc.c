@@ -2,7 +2,7 @@
 
 int main() {
   // char *str = "9.235+sin(10)-564-28.6*35mod99^2";
-  char* str = "9.235-564-28.6*35mod99^2";
+  char* str = "1+(-9)";
   // создаем указатели для "очереди"
   Node *front = NULL, *rear = NULL;
   parserStrToQue(&rear, &front, str);
@@ -77,11 +77,12 @@ int checkNumber(char* str) {
 }
 
 void parserStrToQue(Node** rear, Node** front, char* str) {
+  int numIn = 0;
   while (*str) {
     if (isdigit(peekCh(str))) {
       parserDigitFromStrToQue(rear, front, &str);
     } else {
-      enqueueOp(rear, front, &str);
+      enqueueOp(rear, front, &str, &numIn);
       printStek(*rear);
     }
   }
@@ -211,6 +212,8 @@ double calcUnaryRes(double num, int op) {
   if (op == ATAN) result = atan(num);
   if (op == SQRT) result = sqrt(num);
   if (op == LN) result = log(num);
+  if (op == U_MINUS) result = -num;
+  if (op == U_PLUS) result = (num < 0) ? -num : num;
   return result;
 }
 
@@ -266,7 +269,7 @@ double popEqueue(Node** rear, Node** front) {
   return d;
 }
 
-void enqueueOp(Node** rear, Node** front, char** str) {
+void enqueueOp(Node** rear, Node** front, char** str, int* numIn) {
   char* strF[] = {"sin",  "cos",  "tan", "log", "asin", "acos",
                   "atan", "sqrt", "ln",  "mod", "+",    "-",
                   "*",    "/",    "^",   "(",   ")"};
@@ -275,14 +278,15 @@ void enqueueOp(Node** rear, Node** front, char** str) {
     if (!strncmp(*str, strF[i], 3) || !strncmp(*str, strF[i], 4) ||
         !strncmp(*str, strF[i], 2) || !strncmp(*str, strF[i], 1)) {
       index = (int)i;
-      // if (peekCh(strF[i]) == '-' && (!strF[i - 1])) {
-      //   unary = 1;
-      // }
+      if ((peekCh(strF[i]) == '-')) {
+        if (*numIn == 0) {
+          unary = 1;
+        } else if (peekCh(*(str - 1)) == '(') {
+          unary = 1;
+        }
+      }
       break;
     }
-  }
-  if (unary) {
-    index = (peekCh(strF[index]) == '-') ? 20 : 21;
   }
   pushEnqueue(rear, front, index);
   char c = peekCh(strF[index]);
@@ -298,9 +302,13 @@ void enqueueOp(Node** rear, Node** front, char** str) {
     (*rear)->priority = 5;
   } else {
     (*rear)->priority = 4;
+    if (unary) {
+      (*rear)->value = (c == '-') ? U_MINUS : U_PLUS;
+    }
   }
   (*rear)->type = OPERATOR;
   *str += strlen(strF[index]);
+  *numIn += strlen(strF[index]);
 }
 
 /*___________________PRINT_FUNCTIONS__________________*/

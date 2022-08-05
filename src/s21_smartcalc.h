@@ -26,10 +26,10 @@ typedef enum {
   BKT_OP,
   BKT_CL,
   OPERATOR,
-  NUMBER,
-  X,
   U_MINUS,
-  U_PLUS
+  U_PLUS,
+  NUMBER,
+  X
 } type_t;
 
 typedef struct Node_s {
@@ -72,7 +72,7 @@ double popStack(Node** plist);
 /*__________________ENQUEUE_WORK_FUNCTIONS__________________*/
 void pushEnqueue(Node** rear, Node** front, double digit);
 double popEqueue(Node** rear, Node** front);
-void enqueueOp(Node** rear, Node** front, char** str);
+void enqueueOp(Node** rear, Node** front, char** str, int* numIn);
 
 /*___________________PRINT_FUNCTIONS__________________*/
 void printStek(Node* src);
