@@ -1,4 +1,4 @@
-GCC = gcc  -std=c11 -g # -Werror -Wextra -Wall
+GCC = gcc -Werror -Wextra -Wall -std=c11 -g  
 SOURCE = s21_*.c
 OBJ = $(SOURCE:.c=.o)
 GCOVFLAGS=-L. --coverage
@@ -14,10 +14,11 @@ endif
 all: gcov_report
 
 clean:
-	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.html *.css test report *.txt s21_smartcalc *.cfg *a.out *.dSYM
+	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.html *.css test report smartcalc_test.c *.cfg *a.out *.dSYM
 
 test: s21_smartcalc.a
-	$(GCC) test.c -lcheck $(SOURCE) -o test $(CHECK_H) $(GCOVFLAGS)
+	checkmk clean_mode=1 smartcalc_test.txt > smartcalc_test.c
+	$(GCC) smartcalc_test.c -lcheck $(SOURCE) -o test $(CHECK_H) $(GCOVFLAGS)
 	./test
 
 test_:
@@ -26,8 +27,8 @@ test_:
 	@./test
 
 git:
-	git add Makefile s21_smartcalc_test.c s21_smartcalc.c s21_smartcalc.h test_calc.txt
-	git commit -m "+test"
+	git add Makefile s21_smartcalc.c s21_smartcalc.h smartcalc_test.txt
+	git commit -m "calculation backend_full"
 	git push origin develop
 
 s21_smartcalc.a: clean $(OBJ)

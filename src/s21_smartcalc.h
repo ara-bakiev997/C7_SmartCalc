@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define SUCCESS 1
+#define FAILURE 0
+#define SIZE_ARRAY sizeof(strF) / sizeof(strF[0])
 
 typedef enum {
   SIN,
@@ -39,22 +42,21 @@ typedef struct Node_s {
   struct Node_s* next;
 } Node;
 
-#define SIZE_ARRAY sizeof(strF) / sizeof(strF[0])
-
 /*__________________GENERAL_WORK_FUNCTIONS__________________*/
+int start(char* str, double* result);
 Node* newNode(double src);
 double peek(Node* src);
 int isEmpty(Node* src);
-int validation(char src[256]);
+int validation(char* src);
 char peekCh(char* string);
 int checkNumber(char* str);
-void parserStrToQue(Node** rear, Node** front, char* str);
-void parserDigitFromStrToQue(Node** rear, Node** front, char** str);
+int parserStrToQue(Node** rear, Node** front, char* str);
+int parserDigitFromStrToQue(Node** rear, Node** front, char** str);
 
 /*__________________CALCUCATE_FUNCTIONS__________________*/
 double calculateExpression(Node** stack_n, Node** stack_op, double d,
                            int precedence);
-double resolution(Node** rear, Node** front);
+int resolution(Node** rear, Node** front, double* result);
 double calcBinaryStack(Node** stack_op, Node** stack_n);
 double calcBinaryRes(double num1, double num2, int op);
 double calcUnaryStack(Node** stack_op, Node** stack_n);
