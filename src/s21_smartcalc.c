@@ -1,27 +1,26 @@
 #include "s21_smartcalc.h"
 
-int main() {
-  // char *str =
-  // "sqrt(4)+9.235+2^3^sin(cos(10))-564-sqrt(25)+28.6*35mod99^2^3";
-  // char *str = "1+2+3+(3+5)*2+3/(1-4)^3*(3^((2+1)+1))/(((1)))+2";
-  char str[255] =
-      "-5+(-1+2)*4*cos(+2*7.5-2)+sin(cos(2*5))-sqrt(2^log(5-1))+ln(55/"
-      "(2+7))+asin(0.5)+tan(50)";
-  // char str[] = "22222222222222222+0";
-  // создаем указатели для "очереди"
-  // Node *front = NULL, *rear = NULL;
-  // parser_str_to_que(&rear, &front, str);
-  double result;
-  int error;
-  error = start(str, &result);
-  // INFINITY
-  printf("EXPRESSION= %s\n", str);
-  printf("RESULT= %lf\n", result);
-  printf("STATUS= %s\n", error ? "SUCCESS" : "FAILURE");
+// int main() {
+//   // char *str =
+//   // "sqrt(4)+9.235+2^3^sin(cos(10))-564-sqrt(25)+28.6*35mod99^2^3";
+//   // char *str = "1+2+3+(3+5)*2+3/(1-4)^3*(3^((2+1)+1))/(((1)))+2";
+//   char str[255] =
+//       "-5+(-1+2)*4*cos(+2*7.5-2)+sin(cos(2*5))-sqrt(2^log(5-1))+ln(55/"
+//       "(2+7))+asin(0.5)+tan(50)";
+//   // char str[] = "22222222222222222+0";
+//   // создаем указатели для "очереди"
+//   // Node *front = NULL, *rear = NULL;
+//   // parser_str_to_que(&rear, &front, str);
+//   double result;
+//   int error;
+//   error = start(str, &result);
+//   // INFINITY
+//   printf("EXPRESSION= %s\n", str);
+//   printf("RESULT= %lf\n", result);
+//   printf("STATUS= %s\n", error ? "SUCCESS" : "FAILURE");
 
-  return 0;
-}
-
+//   return 0;
+// }
 
 /*__________________GENERAL_WORK_FUNCTIONS__________________*/
 int start(char* str, double* result) {
@@ -49,13 +48,7 @@ Node* newNode(double value) {
 
 double peek(Node* src) { return src->value; }
 
-int isEmpty(Node* src) {
-  if (!isEmpty(src)) {
-    return src->value;
-  } else {
-    exit(EXIT_FAILURE);
-  }
-}
+int isEmpty(Node* src) { return src == NULL; }
 
 int validation(char* str) {
   int error = SUCCESS;
@@ -171,7 +164,7 @@ int resolution(Node** rear, Node** front, double* result) {
 }
 
 double calculateExpression(Node** stack_n, Node** stack_op, double d,
-                            int priority) {
+                           int priority) {
   double result;
   if (isEmpty(*stack_op)) {
     pushStack(stack_op, d);

@@ -16,10 +16,6 @@ error = start("1+2-3", &res);
 ck_assert_double_eq(res, 0);
 ck_assert_int_eq(error, 1);
 
-error = start("sqrt(4)+9.235+2^3^sin(cos(10))-564-sqrt(25)+28.6*35mod99^2^3", &res);
-ck_assert_double_eq(res, 444.59309217773205);
-ck_assert_int_eq(error, 1);
-
 error = start("1+2+3+(3+5)*2+3/(1-4)^3*(3^((2+1)+1))/(((1)))+2", &res);
 ck_assert_double_eq(res, 15);
 ck_assert_int_eq(error, 1);

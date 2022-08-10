@@ -4,12 +4,7 @@ OBJ = $(SOURCE:.c=.o)
 GCOVFLAGS=-L. --coverage
 HTML=lcov -t "test" -o rep.info -c -d .
 OS = $(shell uname)
-
-ifeq ($(OS), Darwin)
-	CHECK_H=-lcheck
-else
-	CHECK_H=-lcheck -pthread -lrt -lm
-endif
+CHECK_H=`pkg-config --static --libs check`
 
 all: gcov_report
 
