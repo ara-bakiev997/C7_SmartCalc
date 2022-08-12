@@ -22,8 +22,8 @@ test_:
 	@./test
 
 git:
-	git add Makefile s21_smartcalc.c s21_smartcalc.h smartcalc_test.txt build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug smartCalc
-	git commit -m "calculation backend_full"
+	git add Makefile s21_smartcalc.c s21_smartcalc.h smartcalc_test.txt frontend
+	git commit -m "learning QT"
 	git push origin develop
 
 s21_smartcalc.a: clean $(OBJ)
