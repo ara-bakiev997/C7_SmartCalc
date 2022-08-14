@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+extern "C" {
+   #include "../../s21_smartcalc.h"
+}
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -15,10 +19,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_pushButton_clicked();
-
 private:
     Ui::MainWindow *ui;
+
+private slots:
+        void digits_numbers();
+        void calculate();
+
 };
 #endif // MAINWINDOW_H

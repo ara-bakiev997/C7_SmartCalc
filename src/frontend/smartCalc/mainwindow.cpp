@@ -1,18 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QMessageBox>
-#include <QPixmap>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix(":/resoursec/image/Снимок экрана 2022-08-12 в 9.06.56 PM.png");
-    int w = ui->image->width();
-    int h = ui->image->height();
-
-    ui->image->setPixmap(pix.scaled(w, h, Qt:: KeepAspectRatio));
+    connect(ui->pushButton_1, SIGNAL(clicked()), this, SLOT(digits_numbers()));
+    connect(ui->pushButton_sum, SIGNAL(clicked()), this, SLOT(digits_numbers()));
+    connect(ui->pushButton_equal, SIGNAL(clicked()), this, SLOT(calculate()));
 }
 
 MainWindow::~MainWindow()
@@ -20,17 +17,29 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::digits_numbers() {
+    QPushButton *button = (QPushButton *)sender();
+    QString new_label;
+    new_label = ui->string->text() + button->text();
 
-void MainWindow::on_pushButton_clicked()
-{
-    QString login = ui->login->text();
-    QString password = ui->password->text();
-    if(login == "test" && password == "test") {
-//        QMessageBox::information(this, "Ура", "Вы успешно авторизовались");
-        ui->statusbar->showMessage("Вы успешно авторизовались");
-    } else {
-        ui->statusbar->showMessage("Вы не авторизовались");
-//        QMessageBox::warning(this, "Увы(((", "Пароль или логин не верны ");
-    }
+    ui->string->setText(new_label);
 }
 
+void MainWindow::calculate() {
+    QPushButton *button = (QPushButton *)sender();
+    QString value;
+    value = ui->string->text();
+    if (button->text() == '=') {
+        double result;
+        QByteArray str_bit = value.toLocal8Bit();
+        char *res_str = str_bit.data();
+        int check = start(res_str, &result);
+        if (!check) {
+            ui->string->setText("ERROR");
+        } else {
+            value = QString::number(result);
+            ui->result->setText(value);
+            ui->string->setText("");
+        }
+    }
+}

@@ -11,15 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,89 +22,43 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QGroupBox *groupBox;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout_2;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
+    QLabel *string;
+    QPushButton *pushButton_1;
+    QPushButton *pushButton_sum;
+    QPushButton *pushButton_equal;
     QLabel *label;
-    QLineEdit *login;
-    QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
-    QLineEdit *password;
-    QPushButton *pushButton;
-    QLabel *image;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    QLabel *result;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(683, 529);
+        MainWindow->resize(525, 425);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        groupBox = new QGroupBox(centralwidget);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(340, 150, 231, 121));
-        layoutWidget = new QWidget(groupBox);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 20, 197, 101));
-        verticalLayout_2 = new QVBoxLayout(layoutWidget);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(layoutWidget);
+        string = new QLabel(centralwidget);
+        string->setObjectName(QString::fromUtf8("string"));
+        string->setGeometry(QRect(80, 170, 321, 41));
+        pushButton_1 = new QPushButton(centralwidget);
+        pushButton_1->setObjectName(QString::fromUtf8("pushButton_1"));
+        pushButton_1->setGeometry(QRect(70, 230, 100, 32));
+        pushButton_sum = new QPushButton(centralwidget);
+        pushButton_sum->setObjectName(QString::fromUtf8("pushButton_sum"));
+        pushButton_sum->setGeometry(QRect(210, 230, 100, 32));
+        pushButton_equal = new QPushButton(centralwidget);
+        pushButton_equal->setObjectName(QString::fromUtf8("pushButton_equal"));
+        pushButton_equal->setGeometry(QRect(70, 280, 100, 32));
+        label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout->addWidget(label);
-
-        login = new QLineEdit(layoutWidget);
-        login->setObjectName(QString::fromUtf8("login"));
-
-        horizontalLayout->addWidget(login);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_2 = new QLabel(layoutWidget);
+        label->setGeometry(QRect(10, 180, 58, 16));
+        label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        horizontalLayout_2->addWidget(label_2);
-
-        password = new QLineEdit(layoutWidget);
-        password->setObjectName(QString::fromUtf8("password"));
-
-        horizontalLayout_2->addWidget(password);
-
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
-
-        verticalLayout_2->addLayout(verticalLayout);
-
-        pushButton = new QPushButton(layoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        verticalLayout_2->addWidget(pushButton);
-
-        image = new QLabel(centralwidget);
-        image->setObjectName(QString::fromUtf8("image"));
-        image->setGeometry(QRect(30, 150, 181, 161));
-        image->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../Documents/2022-07-17 15.40.41.jpg")));
+        label_2->setGeometry(QRect(10, 110, 58, 16));
+        result = new QLabel(centralwidget);
+        result->setObjectName(QString::fromUtf8("result"));
+        result->setGeometry(QRect(70, 100, 321, 41));
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 683, 24));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
@@ -120,11 +68,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Avtorization", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "login", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "password", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "sig in", nullptr));
-        image->setText(QString());
+        string->setText(QString());
+        pushButton_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
+        pushButton_sum->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "String", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "result", nullptr));
+        result->setText(QString());
     } // retranslateUi
 
 };
