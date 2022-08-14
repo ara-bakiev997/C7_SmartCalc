@@ -90,7 +90,7 @@ void MainWindow::calculate() {
 void MainWindow::AC() {
     ui->string->setText("");
     ui->result->setText("");
-    ui->widget->addGraph(0);
+//    ui->widget->addGraph(0);
 }
 
 void MainWindow::del() {
