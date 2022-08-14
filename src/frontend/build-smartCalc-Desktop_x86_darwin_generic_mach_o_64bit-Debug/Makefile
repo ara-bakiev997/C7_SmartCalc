@@ -54,11 +54,15 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../../s21_smartcalc.c \
 		../SmartCalc/main.cpp \
-		../SmartCalc/mainwindow.cpp moc_mainwindow.cpp
+		../SmartCalc/mainwindow.cpp \
+		../SmartCalc/qcustomplot.cpp moc_mainwindow.cpp \
+		moc_qcustomplot.cpp
 OBJECTS       = s21_smartcalc.o \
 		main.o \
 		mainwindow.o \
-		moc_mainwindow.o
+		qcustomplot.o \
+		moc_mainwindow.o \
+		moc_qcustomplot.o
 DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/share/qt/mkspecs/features/device_config.prf \
 		/usr/local/share/qt/mkspecs/common/unix.conf \
@@ -315,9 +319,11 @@ DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/share/qt/mkspecs/features/lex.prf \
 		../SmartCalc/SmartCalc.pro ../../s21_smartcalc.h \
-		../SmartCalc/mainwindow.h ../../s21_smartcalc.c \
+		../SmartCalc/mainwindow.h \
+		../SmartCalc/qcustomplot.h ../../s21_smartcalc.c \
 		../SmartCalc/main.cpp \
-		../SmartCalc/mainwindow.cpp
+		../SmartCalc/mainwindow.cpp \
+		../SmartCalc/qcustomplot.cpp
 QMAKE_TARGET  = SmartCalc
 DESTDIR       = 
 TARGET        = SmartCalc.app/Contents/MacOS/SmartCalc
@@ -893,8 +899,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../s21_smartcalc.h ../SmartCalc/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../s21_smartcalc.c ../SmartCalc/main.cpp ../SmartCalc/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../s21_smartcalc.h ../SmartCalc/mainwindow.h ../SmartCalc/qcustomplot.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../s21_smartcalc.c ../SmartCalc/main.cpp ../SmartCalc/mainwindow.cpp ../SmartCalc/qcustomplot.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../SmartCalc/mainwindow.ui $(DISTDIR)/
 
 
@@ -930,9 +936,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/local/share/qt/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11 -Wall -Wextra -dM -E -o moc_predefs.h /usr/local/share/qt/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_qcustomplot.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_qcustomplot.cpp
 moc_mainwindow.cpp: ../SmartCalc/mainwindow.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
 		/usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
@@ -944,6 +950,14 @@ moc_mainwindow.cpp: ../SmartCalc/mainwindow.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
 	/usr/local/share/qt/libexec/moc $(DEFINES) --include '/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-SmartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h' -I/usr/local/share/qt/mkspecs/macx-clang -I'/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/SmartCalc' -I/usr/local/lib/QtPrintSupport.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../SmartCalc/mainwindow.h -o moc_mainwindow.cpp
+
+moc_qcustomplot.cpp: ../SmartCalc/qcustomplot.h \
+		/usr/local/lib/QtCore.framework/Headers/qmath.h \
+		/usr/local/lib/QtCore.framework/Headers/qnumeric.h \
+		/usr/local/lib/QtCore.framework/Headers/QtNumeric \
+		moc_predefs.h \
+		/usr/local/share/qt/libexec/moc
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include '/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-SmartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h' -I/usr/local/share/qt/mkspecs/macx-clang -I'/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/SmartCalc' -I/usr/local/lib/QtPrintSupport.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../SmartCalc/qcustomplot.h -o moc_qcustomplot.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -994,8 +1008,17 @@ mainwindow.o: ../SmartCalc/mainwindow.cpp ../SmartCalc/mainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../SmartCalc/mainwindow.cpp
 
+qcustomplot.o: ../SmartCalc/qcustomplot.cpp ../SmartCalc/qcustomplot.h \
+		/usr/local/lib/QtCore.framework/Headers/qmath.h \
+		/usr/local/lib/QtCore.framework/Headers/qnumeric.h \
+		/usr/local/lib/QtCore.framework/Headers/QtNumeric
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qcustomplot.o ../SmartCalc/qcustomplot.cpp
+
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_qcustomplot.o: moc_qcustomplot.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_qcustomplot.o moc_qcustomplot.cpp
 
 ####### Install
 

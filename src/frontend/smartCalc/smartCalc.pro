@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     ../../s21_smartcalc.c \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     ../../s21_smartcalc.h \
-    mainwindow.h
+    mainwindow.h \
+    qcustomplot.h
 
 FORMS += \
     mainwindow.ui
