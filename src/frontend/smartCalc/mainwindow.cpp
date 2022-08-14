@@ -73,6 +73,7 @@ void MainWindow::calculate() {
         int check = start(res_str, &result);
         if (!check) {
             ui->result->setText("ERROR");
+            ui->string->setText("");
         } else {
             value = QString::number(result, 'g', 20);
             ui->result->setText(value);
