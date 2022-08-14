@@ -23,9 +23,11 @@ private:
     Ui::MainWindow *ui;
 
 private slots:
-        void digits_numbers();
+        void digits_and_operators();
+        void functions();
         void calculate();
         void AC();
+        void del();
 
 };
 #endif // MAINWINDOW_H

@@ -11,7 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -22,119 +26,293 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *string;
-    QPushButton *pushButton_1;
-    QPushButton *pushButton_sum;
-    QPushButton *pushButton_equal;
     QLabel *label;
     QLabel *label_2;
-    QLabel *result;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
+    QWidget *layoutWidget;
+    QGridLayout *gridLayout_3;
+    QGridLayout *gridLayout;
+    QPushButton *pushButton_sqrt;
+    QPushButton *pushButton_mod;
+    QPushButton *pushButton_x;
+    QPushButton *pushButton_openBracket;
+    QPushButton *pushButton_closeBracket;
+    QPushButton *pushButton_div;
+    QPushButton *pushButton_ln;
+    QPushButton *pushButton_log;
     QPushButton *pushButton_7;
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
-    QPushButton *pushButton_0;
-    QPushButton *pushButton_sub;
-    QPushButton *pushButton_AC;
-    QPushButton *pushButton_dot;
     QPushButton *pushButton_mul;
-    QPushButton *pushButton_div;
-    QPushButton *pushButton_mod;
-    QPushButton *pushButton_openBracket;
-    QPushButton *pushButton_closeBracket;
+    QPushButton *pushButton_atan;
+    QPushButton *pushButton_tan;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_sub;
+    QPushButton *pushButton_acos;
+    QPushButton *pushButton_cos;
+    QPushButton *pushButton_1;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_sum;
+    QPushButton *pushButton_asin;
+    QPushButton *pushButton_sin;
+    QPushButton *pushButton_pow;
+    QPushButton *pushButton_0;
+    QPushButton *pushButton_dot;
+    QPushButton *pushButton_equal;
+    QGridLayout *gridLayout_2;
+    QPushButton *pushButton_AC;
+    QPushButton *pushButton_delete;
+    QCheckBox *checkBox_plot_graph;
+    QLabel *Xmax;
+    QDoubleSpinBox *doubleSpinBox_Xmax;
+    QLabel *Ymax;
+    QDoubleSpinBox *doubleSpinBox_Ymax;
+    QLabel *X_value;
+    QDoubleSpinBox *doubleSpinBox_X_value;
+    QLineEdit *string;
+    QLineEdit *result;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(705, 439);
+        MainWindow->resize(918, 524);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        string = new QLabel(centralwidget);
-        string->setObjectName(QString::fromUtf8("string"));
-        string->setGeometry(QRect(70, 40, 321, 41));
-        string->setStyleSheet(QString::fromUtf8(""));
-        pushButton_1 = new QPushButton(centralwidget);
-        pushButton_1->setObjectName(QString::fromUtf8("pushButton_1"));
-        pushButton_1->setGeometry(QRect(10, 340, 100, 32));
-        pushButton_sum = new QPushButton(centralwidget);
-        pushButton_sum->setObjectName(QString::fromUtf8("pushButton_sum"));
-        pushButton_sum->setGeometry(QRect(330, 370, 100, 32));
-        pushButton_sum->setStyleSheet(QString::fromUtf8(""));
-        pushButton_equal = new QPushButton(centralwidget);
-        pushButton_equal->setObjectName(QString::fromUtf8("pushButton_equal"));
-        pushButton_equal->setGeometry(QRect(430, 370, 100, 32));
-        pushButton_equal->setStyleSheet(QString::fromUtf8(""));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(10, 50, 58, 16));
+        label->setGeometry(QRect(30, 150, 71, 41));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(10, 10, 58, 16));
-        result = new QLabel(centralwidget);
-        result->setObjectName(QString::fromUtf8("result"));
-        result->setGeometry(QRect(70, 0, 321, 41));
-        result->setStyleSheet(QString::fromUtf8(""));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(120, 340, 100, 32));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(230, 340, 100, 32));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(10, 310, 100, 32));
-        pushButton_5 = new QPushButton(centralwidget);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(120, 310, 100, 32));
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setGeometry(QRect(230, 310, 100, 32));
-        pushButton_7 = new QPushButton(centralwidget);
-        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-        pushButton_7->setGeometry(QRect(10, 280, 100, 32));
-        pushButton_8 = new QPushButton(centralwidget);
-        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-        pushButton_8->setGeometry(QRect(120, 280, 100, 32));
-        pushButton_9 = new QPushButton(centralwidget);
-        pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-        pushButton_9->setGeometry(QRect(230, 280, 100, 32));
-        pushButton_0 = new QPushButton(centralwidget);
-        pushButton_0->setObjectName(QString::fromUtf8("pushButton_0"));
-        pushButton_0->setGeometry(QRect(10, 370, 211, 32));
-        pushButton_sub = new QPushButton(centralwidget);
-        pushButton_sub->setObjectName(QString::fromUtf8("pushButton_sub"));
-        pushButton_sub->setGeometry(QRect(330, 340, 100, 32));
-        pushButton_sub->setStyleSheet(QString::fromUtf8(""));
-        pushButton_AC = new QPushButton(centralwidget);
-        pushButton_AC->setObjectName(QString::fromUtf8("pushButton_AC"));
-        pushButton_AC->setGeometry(QRect(430, 280, 100, 32));
-        pushButton_AC->setStyleSheet(QString::fromUtf8(""));
-        pushButton_dot = new QPushButton(centralwidget);
-        pushButton_dot->setObjectName(QString::fromUtf8("pushButton_dot"));
-        pushButton_dot->setGeometry(QRect(230, 370, 100, 32));
-        pushButton_mul = new QPushButton(centralwidget);
-        pushButton_mul->setObjectName(QString::fromUtf8("pushButton_mul"));
-        pushButton_mul->setGeometry(QRect(330, 310, 100, 32));
-        pushButton_mul->setStyleSheet(QString::fromUtf8(""));
-        pushButton_div = new QPushButton(centralwidget);
-        pushButton_div->setObjectName(QString::fromUtf8("pushButton_div"));
-        pushButton_div->setGeometry(QRect(330, 280, 100, 32));
-        pushButton_div->setStyleSheet(QString::fromUtf8(""));
-        pushButton_mod = new QPushButton(centralwidget);
+        label_2->setGeometry(QRect(30, 220, 81, 41));
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(20, 270, 474, 170));
+        gridLayout_3 = new QGridLayout(layoutWidget);
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        pushButton_sqrt = new QPushButton(layoutWidget);
+        pushButton_sqrt->setObjectName(QString::fromUtf8("pushButton_sqrt"));
+
+        gridLayout->addWidget(pushButton_sqrt, 0, 0, 1, 1);
+
+        pushButton_mod = new QPushButton(layoutWidget);
         pushButton_mod->setObjectName(QString::fromUtf8("pushButton_mod"));
-        pushButton_mod->setGeometry(QRect(430, 340, 100, 32));
         pushButton_mod->setStyleSheet(QString::fromUtf8(""));
-        pushButton_openBracket = new QPushButton(centralwidget);
+
+        gridLayout->addWidget(pushButton_mod, 0, 1, 1, 1);
+
+        pushButton_x = new QPushButton(layoutWidget);
+        pushButton_x->setObjectName(QString::fromUtf8("pushButton_x"));
+
+        gridLayout->addWidget(pushButton_x, 0, 2, 1, 1);
+
+        pushButton_openBracket = new QPushButton(layoutWidget);
         pushButton_openBracket->setObjectName(QString::fromUtf8("pushButton_openBracket"));
-        pushButton_openBracket->setGeometry(QRect(10, 250, 100, 32));
-        pushButton_closeBracket = new QPushButton(centralwidget);
+
+        gridLayout->addWidget(pushButton_openBracket, 0, 3, 1, 1);
+
+        pushButton_closeBracket = new QPushButton(layoutWidget);
         pushButton_closeBracket->setObjectName(QString::fromUtf8("pushButton_closeBracket"));
-        pushButton_closeBracket->setGeometry(QRect(120, 250, 100, 32));
+
+        gridLayout->addWidget(pushButton_closeBracket, 0, 4, 1, 1);
+
+        pushButton_div = new QPushButton(layoutWidget);
+        pushButton_div->setObjectName(QString::fromUtf8("pushButton_div"));
+        pushButton_div->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout->addWidget(pushButton_div, 0, 5, 1, 1);
+
+        pushButton_ln = new QPushButton(layoutWidget);
+        pushButton_ln->setObjectName(QString::fromUtf8("pushButton_ln"));
+
+        gridLayout->addWidget(pushButton_ln, 1, 0, 1, 1);
+
+        pushButton_log = new QPushButton(layoutWidget);
+        pushButton_log->setObjectName(QString::fromUtf8("pushButton_log"));
+
+        gridLayout->addWidget(pushButton_log, 1, 1, 1, 1);
+
+        pushButton_7 = new QPushButton(layoutWidget);
+        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
+
+        gridLayout->addWidget(pushButton_7, 1, 2, 1, 1);
+
+        pushButton_8 = new QPushButton(layoutWidget);
+        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
+
+        gridLayout->addWidget(pushButton_8, 1, 3, 1, 1);
+
+        pushButton_9 = new QPushButton(layoutWidget);
+        pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
+
+        gridLayout->addWidget(pushButton_9, 1, 4, 1, 1);
+
+        pushButton_mul = new QPushButton(layoutWidget);
+        pushButton_mul->setObjectName(QString::fromUtf8("pushButton_mul"));
+        pushButton_mul->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout->addWidget(pushButton_mul, 1, 5, 1, 1);
+
+        pushButton_atan = new QPushButton(layoutWidget);
+        pushButton_atan->setObjectName(QString::fromUtf8("pushButton_atan"));
+
+        gridLayout->addWidget(pushButton_atan, 2, 0, 1, 1);
+
+        pushButton_tan = new QPushButton(layoutWidget);
+        pushButton_tan->setObjectName(QString::fromUtf8("pushButton_tan"));
+
+        gridLayout->addWidget(pushButton_tan, 2, 1, 1, 1);
+
+        pushButton_4 = new QPushButton(layoutWidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        gridLayout->addWidget(pushButton_4, 2, 2, 1, 1);
+
+        pushButton_5 = new QPushButton(layoutWidget);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+
+        gridLayout->addWidget(pushButton_5, 2, 3, 1, 1);
+
+        pushButton_6 = new QPushButton(layoutWidget);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+
+        gridLayout->addWidget(pushButton_6, 2, 4, 1, 1);
+
+        pushButton_sub = new QPushButton(layoutWidget);
+        pushButton_sub->setObjectName(QString::fromUtf8("pushButton_sub"));
+        pushButton_sub->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout->addWidget(pushButton_sub, 2, 5, 1, 1);
+
+        pushButton_acos = new QPushButton(layoutWidget);
+        pushButton_acos->setObjectName(QString::fromUtf8("pushButton_acos"));
+
+        gridLayout->addWidget(pushButton_acos, 3, 0, 1, 1);
+
+        pushButton_cos = new QPushButton(layoutWidget);
+        pushButton_cos->setObjectName(QString::fromUtf8("pushButton_cos"));
+
+        gridLayout->addWidget(pushButton_cos, 3, 1, 1, 1);
+
+        pushButton_1 = new QPushButton(layoutWidget);
+        pushButton_1->setObjectName(QString::fromUtf8("pushButton_1"));
+
+        gridLayout->addWidget(pushButton_1, 3, 2, 1, 1);
+
+        pushButton_2 = new QPushButton(layoutWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        gridLayout->addWidget(pushButton_2, 3, 3, 1, 1);
+
+        pushButton_3 = new QPushButton(layoutWidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        gridLayout->addWidget(pushButton_3, 3, 4, 1, 1);
+
+        pushButton_sum = new QPushButton(layoutWidget);
+        pushButton_sum->setObjectName(QString::fromUtf8("pushButton_sum"));
+        pushButton_sum->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout->addWidget(pushButton_sum, 3, 5, 1, 1);
+
+        pushButton_asin = new QPushButton(layoutWidget);
+        pushButton_asin->setObjectName(QString::fromUtf8("pushButton_asin"));
+
+        gridLayout->addWidget(pushButton_asin, 4, 0, 1, 1);
+
+        pushButton_sin = new QPushButton(layoutWidget);
+        pushButton_sin->setObjectName(QString::fromUtf8("pushButton_sin"));
+
+        gridLayout->addWidget(pushButton_sin, 4, 1, 1, 1);
+
+        pushButton_pow = new QPushButton(layoutWidget);
+        pushButton_pow->setObjectName(QString::fromUtf8("pushButton_pow"));
+
+        gridLayout->addWidget(pushButton_pow, 4, 2, 1, 1);
+
+        pushButton_0 = new QPushButton(layoutWidget);
+        pushButton_0->setObjectName(QString::fromUtf8("pushButton_0"));
+
+        gridLayout->addWidget(pushButton_0, 4, 3, 1, 1);
+
+        pushButton_dot = new QPushButton(layoutWidget);
+        pushButton_dot->setObjectName(QString::fromUtf8("pushButton_dot"));
+
+        gridLayout->addWidget(pushButton_dot, 4, 4, 1, 1);
+
+        pushButton_equal = new QPushButton(layoutWidget);
+        pushButton_equal->setObjectName(QString::fromUtf8("pushButton_equal"));
+        pushButton_equal->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout->addWidget(pushButton_equal, 4, 5, 1, 1);
+
+
+        gridLayout_3->addLayout(gridLayout, 0, 0, 4, 1);
+
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        pushButton_AC = new QPushButton(layoutWidget);
+        pushButton_AC->setObjectName(QString::fromUtf8("pushButton_AC"));
+        pushButton_AC->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_2->addWidget(pushButton_AC, 0, 0, 1, 1);
+
+        pushButton_delete = new QPushButton(layoutWidget);
+        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
+        pushButton_delete->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_2->addWidget(pushButton_delete, 0, 1, 1, 1);
+
+        checkBox_plot_graph = new QCheckBox(layoutWidget);
+        checkBox_plot_graph->setObjectName(QString::fromUtf8("checkBox_plot_graph"));
+
+        gridLayout_2->addWidget(checkBox_plot_graph, 1, 0, 1, 2);
+
+
+        gridLayout_3->addLayout(gridLayout_2, 0, 1, 1, 2);
+
+        Xmax = new QLabel(layoutWidget);
+        Xmax->setObjectName(QString::fromUtf8("Xmax"));
+
+        gridLayout_3->addWidget(Xmax, 1, 1, 1, 1);
+
+        doubleSpinBox_Xmax = new QDoubleSpinBox(layoutWidget);
+        doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
+
+        gridLayout_3->addWidget(doubleSpinBox_Xmax, 1, 2, 1, 1);
+
+        Ymax = new QLabel(layoutWidget);
+        Ymax->setObjectName(QString::fromUtf8("Ymax"));
+
+        gridLayout_3->addWidget(Ymax, 2, 1, 1, 1);
+
+        doubleSpinBox_Ymax = new QDoubleSpinBox(layoutWidget);
+        doubleSpinBox_Ymax->setObjectName(QString::fromUtf8("doubleSpinBox_Ymax"));
+
+        gridLayout_3->addWidget(doubleSpinBox_Ymax, 2, 2, 1, 1);
+
+        X_value = new QLabel(layoutWidget);
+        X_value->setObjectName(QString::fromUtf8("X_value"));
+
+        gridLayout_3->addWidget(X_value, 3, 1, 1, 1);
+
+        doubleSpinBox_X_value = new QDoubleSpinBox(layoutWidget);
+        doubleSpinBox_X_value->setObjectName(QString::fromUtf8("doubleSpinBox_X_value"));
+
+        gridLayout_3->addWidget(doubleSpinBox_X_value, 3, 2, 1, 1);
+
+        string = new QLineEdit(centralwidget);
+        string->setObjectName(QString::fromUtf8("string"));
+        string->setGeometry(QRect(120, 150, 371, 41));
+        string->setReadOnly(false);
+        result = new QLineEdit(centralwidget);
+        result->setObjectName(QString::fromUtf8("result"));
+        result->setGeometry(QRect(120, 220, 371, 41));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -145,30 +323,44 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        string->setText(QString());
-        pushButton_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
-        pushButton_sum->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
-        pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "String", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "result", nullptr));
-        result->setText(QString());
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("MainWindow", "5", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
+        pushButton_sqrt->setText(QCoreApplication::translate("MainWindow", "sqrt", nullptr));
+        pushButton_mod->setText(QCoreApplication::translate("MainWindow", "mod", nullptr));
+        pushButton_x->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        pushButton_openBracket->setText(QCoreApplication::translate("MainWindow", "(", nullptr));
+        pushButton_closeBracket->setText(QCoreApplication::translate("MainWindow", ")", nullptr));
+        pushButton_div->setText(QCoreApplication::translate("MainWindow", "/", nullptr));
+        pushButton_ln->setText(QCoreApplication::translate("MainWindow", "ln", nullptr));
+        pushButton_log->setText(QCoreApplication::translate("MainWindow", "log", nullptr));
         pushButton_7->setText(QCoreApplication::translate("MainWindow", "7", nullptr));
         pushButton_8->setText(QCoreApplication::translate("MainWindow", "8", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "9", nullptr));
-        pushButton_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        pushButton_sub->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
-        pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
-        pushButton_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         pushButton_mul->setText(QCoreApplication::translate("MainWindow", "*", nullptr));
-        pushButton_div->setText(QCoreApplication::translate("MainWindow", "/", nullptr));
-        pushButton_mod->setText(QCoreApplication::translate("MainWindow", "mod", nullptr));
-        pushButton_openBracket->setText(QCoreApplication::translate("MainWindow", "(", nullptr));
-        pushButton_closeBracket->setText(QCoreApplication::translate("MainWindow", ")", nullptr));
+        pushButton_atan->setText(QCoreApplication::translate("MainWindow", "atan", nullptr));
+        pushButton_tan->setText(QCoreApplication::translate("MainWindow", "tan", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "5", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
+        pushButton_sub->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
+        pushButton_acos->setText(QCoreApplication::translate("MainWindow", "acos", nullptr));
+        pushButton_cos->setText(QCoreApplication::translate("MainWindow", "cos", nullptr));
+        pushButton_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
+        pushButton_sum->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        pushButton_asin->setText(QCoreApplication::translate("MainWindow", "asin", nullptr));
+        pushButton_sin->setText(QCoreApplication::translate("MainWindow", "sin", nullptr));
+        pushButton_pow->setText(QCoreApplication::translate("MainWindow", "^", nullptr));
+        pushButton_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        pushButton_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
+        pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
+        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "<x", nullptr));
+        checkBox_plot_graph->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
+        Xmax->setText(QCoreApplication::translate("MainWindow", "Xmax", nullptr));
+        Ymax->setText(QCoreApplication::translate("MainWindow", "Ymax", nullptr));
+        X_value->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
     } // retranslateUi
 
 };
