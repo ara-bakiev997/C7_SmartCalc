@@ -12,15 +12,18 @@ SOURCES += \
     ../../s21_smartcalc.c \
     main.cpp \
     mainwindow.cpp \
+    plotgraph.cpp \
     qcustomplot.cpp
 
 HEADERS += \
     ../../s21_smartcalc.h \
     mainwindow.h \
+    plotgraph.h \
     qcustomplot.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    plotgraph.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

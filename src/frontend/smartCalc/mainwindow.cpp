@@ -1,5 +1,6 @@
- #include "mainwindow.h"
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "plotgraph.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -43,6 +44,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_equal, SIGNAL(clicked()), this, SLOT(calculate()));
     connect(ui->pushButton_AC, SIGNAL(clicked()), this, SLOT(AC()));
     connect(ui->pushButton_delete, SIGNAL(clicked()), this, SLOT(del()));
+    /*PlotGraph*/
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -85,6 +90,7 @@ void MainWindow::calculate() {
 void MainWindow::AC() {
     ui->string->setText("");
     ui->result->setText("");
+    ui->widget->addGraph(0);
 }
 
 void MainWindow::del() {
@@ -92,5 +98,28 @@ void MainWindow::del() {
     QString new_label =  ui->string->text();
     new_label = new_label.remove(0, new_label.length());
     ui->string->setText(new_label);
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    h = 0.1;
+    xBegin = -3;
+    xEnd = 3 + h;
+    ui->widget->xAxis->setRange(-4, 4);
+    ui->widget->yAxis->setRange(0, 9);
+
+    N = (xEnd - xBegin)/h + 2;
+
+    for(X = xBegin; X <= xEnd; X+= h) {
+        x.push_back(X);
+        y.push_back(X*X);
+    }
+    ui->widget->addGraph();
+    ui->widget->graph(0)->addData(x,y);
+    ui->widget->replot();
+//    PlotGraph windowGraph;
+//    windowGraph.setModal(true);
+//    windowGraph.exec();
 }
 

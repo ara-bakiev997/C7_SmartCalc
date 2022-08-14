@@ -25,235 +25,6 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_QCP_t {
-    const uint offsetsAndSize[128];
-    char stringdata0[751];
-};
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_QCP_t, stringdata0) + ofs), len 
-static const qt_meta_stringdata_QCP_t qt_meta_stringdata_QCP = {
-    {
-QT_MOC_LITERAL(0, 3), // "QCP"
-QT_MOC_LITERAL(4, 14), // "ResolutionUnit"
-QT_MOC_LITERAL(19, 14), // "ruDotsPerMeter"
-QT_MOC_LITERAL(34, 19), // "ruDotsPerCentimeter"
-QT_MOC_LITERAL(54, 13), // "ruDotsPerInch"
-QT_MOC_LITERAL(68, 9), // "ExportPen"
-QT_MOC_LITERAL(78, 12), // "epNoCosmetic"
-QT_MOC_LITERAL(91, 15), // "epAllowCosmetic"
-QT_MOC_LITERAL(107, 10), // "SignDomain"
-QT_MOC_LITERAL(118, 10), // "sdNegative"
-QT_MOC_LITERAL(129, 6), // "sdBoth"
-QT_MOC_LITERAL(136, 10), // "sdPositive"
-QT_MOC_LITERAL(147, 10), // "MarginSide"
-QT_MOC_LITERAL(158, 6), // "msLeft"
-QT_MOC_LITERAL(165, 7), // "msRight"
-QT_MOC_LITERAL(173, 5), // "msTop"
-QT_MOC_LITERAL(179, 8), // "msBottom"
-QT_MOC_LITERAL(188, 5), // "msAll"
-QT_MOC_LITERAL(194, 6), // "msNone"
-QT_MOC_LITERAL(201, 11), // "MarginSides"
-QT_MOC_LITERAL(213, 18), // "AntialiasedElement"
-QT_MOC_LITERAL(232, 6), // "aeAxes"
-QT_MOC_LITERAL(239, 6), // "aeGrid"
-QT_MOC_LITERAL(246, 9), // "aeSubGrid"
-QT_MOC_LITERAL(256, 8), // "aeLegend"
-QT_MOC_LITERAL(265, 13), // "aeLegendItems"
-QT_MOC_LITERAL(279, 12), // "aePlottables"
-QT_MOC_LITERAL(292, 7), // "aeItems"
-QT_MOC_LITERAL(300, 10), // "aeScatters"
-QT_MOC_LITERAL(311, 7), // "aeFills"
-QT_MOC_LITERAL(319, 10), // "aeZeroLine"
-QT_MOC_LITERAL(330, 7), // "aeOther"
-QT_MOC_LITERAL(338, 5), // "aeAll"
-QT_MOC_LITERAL(344, 6), // "aeNone"
-QT_MOC_LITERAL(351, 19), // "AntialiasedElements"
-QT_MOC_LITERAL(371, 12), // "PlottingHint"
-QT_MOC_LITERAL(384, 6), // "phNone"
-QT_MOC_LITERAL(391, 15), // "phFastPolylines"
-QT_MOC_LITERAL(407, 18), // "phImmediateRefresh"
-QT_MOC_LITERAL(426, 13), // "phCacheLabels"
-QT_MOC_LITERAL(440, 13), // "PlottingHints"
-QT_MOC_LITERAL(454, 11), // "Interaction"
-QT_MOC_LITERAL(466, 5), // "iNone"
-QT_MOC_LITERAL(472, 10), // "iRangeDrag"
-QT_MOC_LITERAL(483, 10), // "iRangeZoom"
-QT_MOC_LITERAL(494, 12), // "iMultiSelect"
-QT_MOC_LITERAL(507, 17), // "iSelectPlottables"
-QT_MOC_LITERAL(525, 11), // "iSelectAxes"
-QT_MOC_LITERAL(537, 13), // "iSelectLegend"
-QT_MOC_LITERAL(551, 12), // "iSelectItems"
-QT_MOC_LITERAL(564, 12), // "iSelectOther"
-QT_MOC_LITERAL(577, 31), // "iSelectPlottablesBeyondAxisRect"
-QT_MOC_LITERAL(609, 12), // "Interactions"
-QT_MOC_LITERAL(622, 17), // "SelectionRectMode"
-QT_MOC_LITERAL(640, 7), // "srmNone"
-QT_MOC_LITERAL(648, 7), // "srmZoom"
-QT_MOC_LITERAL(656, 9), // "srmSelect"
-QT_MOC_LITERAL(666, 9), // "srmCustom"
-QT_MOC_LITERAL(676, 13), // "SelectionType"
-QT_MOC_LITERAL(690, 6), // "stNone"
-QT_MOC_LITERAL(697, 7), // "stWhole"
-QT_MOC_LITERAL(705, 12), // "stSingleData"
-QT_MOC_LITERAL(718, 11), // "stDataRange"
-QT_MOC_LITERAL(730, 20) // "stMultipleDataRanges"
-
-    },
-    "QCP\0ResolutionUnit\0ruDotsPerMeter\0"
-    "ruDotsPerCentimeter\0ruDotsPerInch\0"
-    "ExportPen\0epNoCosmetic\0epAllowCosmetic\0"
-    "SignDomain\0sdNegative\0sdBoth\0sdPositive\0"
-    "MarginSide\0msLeft\0msRight\0msTop\0"
-    "msBottom\0msAll\0msNone\0MarginSides\0"
-    "AntialiasedElement\0aeAxes\0aeGrid\0"
-    "aeSubGrid\0aeLegend\0aeLegendItems\0"
-    "aePlottables\0aeItems\0aeScatters\0aeFills\0"
-    "aeZeroLine\0aeOther\0aeAll\0aeNone\0"
-    "AntialiasedElements\0PlottingHint\0"
-    "phNone\0phFastPolylines\0phImmediateRefresh\0"
-    "phCacheLabels\0PlottingHints\0Interaction\0"
-    "iNone\0iRangeDrag\0iRangeZoom\0iMultiSelect\0"
-    "iSelectPlottables\0iSelectAxes\0"
-    "iSelectLegend\0iSelectItems\0iSelectOther\0"
-    "iSelectPlottablesBeyondAxisRect\0"
-    "Interactions\0SelectionRectMode\0srmNone\0"
-    "srmZoom\0srmSelect\0srmCustom\0SelectionType\0"
-    "stNone\0stWhole\0stSingleData\0stDataRange\0"
-    "stMultipleDataRanges"
-};
-#undef QT_MOC_LITERAL
-
-static const uint qt_meta_data_QCP[] = {
-
- // content:
-      10,       // revision
-       0,       // classname
-       0,    0, // classinfo
-       0,    0, // methods
-       0,    0, // properties
-      13,   14, // enums/sets
-       0,    0, // constructors
-       4,       // flags
-       0,       // signalCount
-
- // enums: name, alias, flags, count, data
-       1,    1, 0x0,    3,   79,
-       5,    5, 0x0,    2,   85,
-       8,    8, 0x0,    3,   89,
-      12,   12, 0x0,    6,   95,
-      19,   12, 0x1,    6,  107,
-      20,   20, 0x0,   13,  119,
-      34,   20, 0x1,   13,  145,
-      35,   35, 0x0,    4,  171,
-      40,   35, 0x1,    4,  179,
-      41,   41, 0x0,   10,  187,
-      52,   41, 0x1,   10,  207,
-      53,   53, 0x0,    4,  227,
-      58,   58, 0x0,    5,  235,
-
- // enum data: key, value
-       2, uint(QCP::ruDotsPerMeter),
-       3, uint(QCP::ruDotsPerCentimeter),
-       4, uint(QCP::ruDotsPerInch),
-       6, uint(QCP::epNoCosmetic),
-       7, uint(QCP::epAllowCosmetic),
-       9, uint(QCP::sdNegative),
-      10, uint(QCP::sdBoth),
-      11, uint(QCP::sdPositive),
-      13, uint(QCP::msLeft),
-      14, uint(QCP::msRight),
-      15, uint(QCP::msTop),
-      16, uint(QCP::msBottom),
-      17, uint(QCP::msAll),
-      18, uint(QCP::msNone),
-      13, uint(QCP::msLeft),
-      14, uint(QCP::msRight),
-      15, uint(QCP::msTop),
-      16, uint(QCP::msBottom),
-      17, uint(QCP::msAll),
-      18, uint(QCP::msNone),
-      21, uint(QCP::aeAxes),
-      22, uint(QCP::aeGrid),
-      23, uint(QCP::aeSubGrid),
-      24, uint(QCP::aeLegend),
-      25, uint(QCP::aeLegendItems),
-      26, uint(QCP::aePlottables),
-      27, uint(QCP::aeItems),
-      28, uint(QCP::aeScatters),
-      29, uint(QCP::aeFills),
-      30, uint(QCP::aeZeroLine),
-      31, uint(QCP::aeOther),
-      32, uint(QCP::aeAll),
-      33, uint(QCP::aeNone),
-      21, uint(QCP::aeAxes),
-      22, uint(QCP::aeGrid),
-      23, uint(QCP::aeSubGrid),
-      24, uint(QCP::aeLegend),
-      25, uint(QCP::aeLegendItems),
-      26, uint(QCP::aePlottables),
-      27, uint(QCP::aeItems),
-      28, uint(QCP::aeScatters),
-      29, uint(QCP::aeFills),
-      30, uint(QCP::aeZeroLine),
-      31, uint(QCP::aeOther),
-      32, uint(QCP::aeAll),
-      33, uint(QCP::aeNone),
-      36, uint(QCP::phNone),
-      37, uint(QCP::phFastPolylines),
-      38, uint(QCP::phImmediateRefresh),
-      39, uint(QCP::phCacheLabels),
-      36, uint(QCP::phNone),
-      37, uint(QCP::phFastPolylines),
-      38, uint(QCP::phImmediateRefresh),
-      39, uint(QCP::phCacheLabels),
-      42, uint(QCP::iNone),
-      43, uint(QCP::iRangeDrag),
-      44, uint(QCP::iRangeZoom),
-      45, uint(QCP::iMultiSelect),
-      46, uint(QCP::iSelectPlottables),
-      47, uint(QCP::iSelectAxes),
-      48, uint(QCP::iSelectLegend),
-      49, uint(QCP::iSelectItems),
-      50, uint(QCP::iSelectOther),
-      51, uint(QCP::iSelectPlottablesBeyondAxisRect),
-      42, uint(QCP::iNone),
-      43, uint(QCP::iRangeDrag),
-      44, uint(QCP::iRangeZoom),
-      45, uint(QCP::iMultiSelect),
-      46, uint(QCP::iSelectPlottables),
-      47, uint(QCP::iSelectAxes),
-      48, uint(QCP::iSelectLegend),
-      49, uint(QCP::iSelectItems),
-      50, uint(QCP::iSelectOther),
-      51, uint(QCP::iSelectPlottablesBeyondAxisRect),
-      54, uint(QCP::srmNone),
-      55, uint(QCP::srmZoom),
-      56, uint(QCP::srmSelect),
-      57, uint(QCP::srmCustom),
-      59, uint(QCP::stNone),
-      60, uint(QCP::stWhole),
-      61, uint(QCP::stSingleData),
-      62, uint(QCP::stDataRange),
-      63, uint(QCP::stMultipleDataRanges),
-
-       0        // eod
-};
-
-const QMetaObject QCP::staticMetaObject = { {
-    nullptr,
-    qt_meta_stringdata_QCP.offsetsAndSize,
-    qt_meta_data_QCP,
-    nullptr,
-    nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_QCP_t
-, QtPrivate::TypeAndForceComplete<QCP, std::true_type>
-
-
-
->,
-    nullptr
-} };
-
 struct qt_meta_stringdata_QCPPainter_t {
     const uint offsetsAndSize[14];
     char stringdata0[85];
@@ -2727,20 +2498,6 @@ void QCPAbstractPlottable::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QCPDataSelection >(); break;
             }
             break;
-        case 2:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-            case 0:
-                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QCP::SelectionType >(); break;
-            }
-            break;
-        case 3:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-            case 0:
-                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QCP::SelectionType >(); break;
-            }
-            break;
         case 4:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
@@ -2775,8 +2532,6 @@ void QCPAbstractPlottable::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
     } else if (_c == QMetaObject::RegisterPropertyMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 7:
-            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QCP::SelectionType >(); break;
         case 6:
         case 5:
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QCPAxis* >(); break;
@@ -8579,20 +8334,6 @@ void QCPPolarGraph::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QCPDataSelection >(); break;
             }
             break;
-        case 2:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-            case 0:
-                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QCP::SelectionType >(); break;
-            }
-            break;
-        case 3:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-            case 0:
-                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QCP::SelectionType >(); break;
-            }
-            break;
         case 4:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
@@ -8693,5 +8434,234 @@ void QCPPolarGraph::selectableChanged(QCP::SelectionType _t1)
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
+struct qt_meta_stringdata_QCP_t {
+    const uint offsetsAndSize[128];
+    char stringdata0[751];
+};
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_QCP_t, stringdata0) + ofs), len 
+static const qt_meta_stringdata_QCP_t qt_meta_stringdata_QCP = {
+    {
+QT_MOC_LITERAL(0, 3), // "QCP"
+QT_MOC_LITERAL(4, 14), // "ResolutionUnit"
+QT_MOC_LITERAL(19, 14), // "ruDotsPerMeter"
+QT_MOC_LITERAL(34, 19), // "ruDotsPerCentimeter"
+QT_MOC_LITERAL(54, 13), // "ruDotsPerInch"
+QT_MOC_LITERAL(68, 9), // "ExportPen"
+QT_MOC_LITERAL(78, 12), // "epNoCosmetic"
+QT_MOC_LITERAL(91, 15), // "epAllowCosmetic"
+QT_MOC_LITERAL(107, 10), // "SignDomain"
+QT_MOC_LITERAL(118, 10), // "sdNegative"
+QT_MOC_LITERAL(129, 6), // "sdBoth"
+QT_MOC_LITERAL(136, 10), // "sdPositive"
+QT_MOC_LITERAL(147, 10), // "MarginSide"
+QT_MOC_LITERAL(158, 6), // "msLeft"
+QT_MOC_LITERAL(165, 7), // "msRight"
+QT_MOC_LITERAL(173, 5), // "msTop"
+QT_MOC_LITERAL(179, 8), // "msBottom"
+QT_MOC_LITERAL(188, 5), // "msAll"
+QT_MOC_LITERAL(194, 6), // "msNone"
+QT_MOC_LITERAL(201, 11), // "MarginSides"
+QT_MOC_LITERAL(213, 18), // "AntialiasedElement"
+QT_MOC_LITERAL(232, 6), // "aeAxes"
+QT_MOC_LITERAL(239, 6), // "aeGrid"
+QT_MOC_LITERAL(246, 9), // "aeSubGrid"
+QT_MOC_LITERAL(256, 8), // "aeLegend"
+QT_MOC_LITERAL(265, 13), // "aeLegendItems"
+QT_MOC_LITERAL(279, 12), // "aePlottables"
+QT_MOC_LITERAL(292, 7), // "aeItems"
+QT_MOC_LITERAL(300, 10), // "aeScatters"
+QT_MOC_LITERAL(311, 7), // "aeFills"
+QT_MOC_LITERAL(319, 10), // "aeZeroLine"
+QT_MOC_LITERAL(330, 7), // "aeOther"
+QT_MOC_LITERAL(338, 5), // "aeAll"
+QT_MOC_LITERAL(344, 6), // "aeNone"
+QT_MOC_LITERAL(351, 19), // "AntialiasedElements"
+QT_MOC_LITERAL(371, 12), // "PlottingHint"
+QT_MOC_LITERAL(384, 6), // "phNone"
+QT_MOC_LITERAL(391, 15), // "phFastPolylines"
+QT_MOC_LITERAL(407, 18), // "phImmediateRefresh"
+QT_MOC_LITERAL(426, 13), // "phCacheLabels"
+QT_MOC_LITERAL(440, 13), // "PlottingHints"
+QT_MOC_LITERAL(454, 11), // "Interaction"
+QT_MOC_LITERAL(466, 5), // "iNone"
+QT_MOC_LITERAL(472, 10), // "iRangeDrag"
+QT_MOC_LITERAL(483, 10), // "iRangeZoom"
+QT_MOC_LITERAL(494, 12), // "iMultiSelect"
+QT_MOC_LITERAL(507, 17), // "iSelectPlottables"
+QT_MOC_LITERAL(525, 11), // "iSelectAxes"
+QT_MOC_LITERAL(537, 13), // "iSelectLegend"
+QT_MOC_LITERAL(551, 12), // "iSelectItems"
+QT_MOC_LITERAL(564, 12), // "iSelectOther"
+QT_MOC_LITERAL(577, 31), // "iSelectPlottablesBeyondAxisRect"
+QT_MOC_LITERAL(609, 12), // "Interactions"
+QT_MOC_LITERAL(622, 17), // "SelectionRectMode"
+QT_MOC_LITERAL(640, 7), // "srmNone"
+QT_MOC_LITERAL(648, 7), // "srmZoom"
+QT_MOC_LITERAL(656, 9), // "srmSelect"
+QT_MOC_LITERAL(666, 9), // "srmCustom"
+QT_MOC_LITERAL(676, 13), // "SelectionType"
+QT_MOC_LITERAL(690, 6), // "stNone"
+QT_MOC_LITERAL(697, 7), // "stWhole"
+QT_MOC_LITERAL(705, 12), // "stSingleData"
+QT_MOC_LITERAL(718, 11), // "stDataRange"
+QT_MOC_LITERAL(730, 20) // "stMultipleDataRanges"
+
+    },
+    "QCP\0ResolutionUnit\0ruDotsPerMeter\0"
+    "ruDotsPerCentimeter\0ruDotsPerInch\0"
+    "ExportPen\0epNoCosmetic\0epAllowCosmetic\0"
+    "SignDomain\0sdNegative\0sdBoth\0sdPositive\0"
+    "MarginSide\0msLeft\0msRight\0msTop\0"
+    "msBottom\0msAll\0msNone\0MarginSides\0"
+    "AntialiasedElement\0aeAxes\0aeGrid\0"
+    "aeSubGrid\0aeLegend\0aeLegendItems\0"
+    "aePlottables\0aeItems\0aeScatters\0aeFills\0"
+    "aeZeroLine\0aeOther\0aeAll\0aeNone\0"
+    "AntialiasedElements\0PlottingHint\0"
+    "phNone\0phFastPolylines\0phImmediateRefresh\0"
+    "phCacheLabels\0PlottingHints\0Interaction\0"
+    "iNone\0iRangeDrag\0iRangeZoom\0iMultiSelect\0"
+    "iSelectPlottables\0iSelectAxes\0"
+    "iSelectLegend\0iSelectItems\0iSelectOther\0"
+    "iSelectPlottablesBeyondAxisRect\0"
+    "Interactions\0SelectionRectMode\0srmNone\0"
+    "srmZoom\0srmSelect\0srmCustom\0SelectionType\0"
+    "stNone\0stWhole\0stSingleData\0stDataRange\0"
+    "stMultipleDataRanges"
+};
+#undef QT_MOC_LITERAL
+
+static const uint qt_meta_data_QCP[] = {
+
+ // content:
+      10,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+      13,   14, // enums/sets
+       0,    0, // constructors
+       4,       // flags
+       0,       // signalCount
+
+ // enums: name, alias, flags, count, data
+       1,    1, 0x0,    3,   79,
+       5,    5, 0x0,    2,   85,
+       8,    8, 0x0,    3,   89,
+      12,   12, 0x0,    6,   95,
+      19,   12, 0x1,    6,  107,
+      20,   20, 0x0,   13,  119,
+      34,   20, 0x1,   13,  145,
+      35,   35, 0x0,    4,  171,
+      40,   35, 0x1,    4,  179,
+      41,   41, 0x0,   10,  187,
+      52,   41, 0x1,   10,  207,
+      53,   53, 0x0,    4,  227,
+      58,   58, 0x0,    5,  235,
+
+ // enum data: key, value
+       2, uint(QCP::ruDotsPerMeter),
+       3, uint(QCP::ruDotsPerCentimeter),
+       4, uint(QCP::ruDotsPerInch),
+       6, uint(QCP::epNoCosmetic),
+       7, uint(QCP::epAllowCosmetic),
+       9, uint(QCP::sdNegative),
+      10, uint(QCP::sdBoth),
+      11, uint(QCP::sdPositive),
+      13, uint(QCP::msLeft),
+      14, uint(QCP::msRight),
+      15, uint(QCP::msTop),
+      16, uint(QCP::msBottom),
+      17, uint(QCP::msAll),
+      18, uint(QCP::msNone),
+      13, uint(QCP::msLeft),
+      14, uint(QCP::msRight),
+      15, uint(QCP::msTop),
+      16, uint(QCP::msBottom),
+      17, uint(QCP::msAll),
+      18, uint(QCP::msNone),
+      21, uint(QCP::aeAxes),
+      22, uint(QCP::aeGrid),
+      23, uint(QCP::aeSubGrid),
+      24, uint(QCP::aeLegend),
+      25, uint(QCP::aeLegendItems),
+      26, uint(QCP::aePlottables),
+      27, uint(QCP::aeItems),
+      28, uint(QCP::aeScatters),
+      29, uint(QCP::aeFills),
+      30, uint(QCP::aeZeroLine),
+      31, uint(QCP::aeOther),
+      32, uint(QCP::aeAll),
+      33, uint(QCP::aeNone),
+      21, uint(QCP::aeAxes),
+      22, uint(QCP::aeGrid),
+      23, uint(QCP::aeSubGrid),
+      24, uint(QCP::aeLegend),
+      25, uint(QCP::aeLegendItems),
+      26, uint(QCP::aePlottables),
+      27, uint(QCP::aeItems),
+      28, uint(QCP::aeScatters),
+      29, uint(QCP::aeFills),
+      30, uint(QCP::aeZeroLine),
+      31, uint(QCP::aeOther),
+      32, uint(QCP::aeAll),
+      33, uint(QCP::aeNone),
+      36, uint(QCP::phNone),
+      37, uint(QCP::phFastPolylines),
+      38, uint(QCP::phImmediateRefresh),
+      39, uint(QCP::phCacheLabels),
+      36, uint(QCP::phNone),
+      37, uint(QCP::phFastPolylines),
+      38, uint(QCP::phImmediateRefresh),
+      39, uint(QCP::phCacheLabels),
+      42, uint(QCP::iNone),
+      43, uint(QCP::iRangeDrag),
+      44, uint(QCP::iRangeZoom),
+      45, uint(QCP::iMultiSelect),
+      46, uint(QCP::iSelectPlottables),
+      47, uint(QCP::iSelectAxes),
+      48, uint(QCP::iSelectLegend),
+      49, uint(QCP::iSelectItems),
+      50, uint(QCP::iSelectOther),
+      51, uint(QCP::iSelectPlottablesBeyondAxisRect),
+      42, uint(QCP::iNone),
+      43, uint(QCP::iRangeDrag),
+      44, uint(QCP::iRangeZoom),
+      45, uint(QCP::iMultiSelect),
+      46, uint(QCP::iSelectPlottables),
+      47, uint(QCP::iSelectAxes),
+      48, uint(QCP::iSelectLegend),
+      49, uint(QCP::iSelectItems),
+      50, uint(QCP::iSelectOther),
+      51, uint(QCP::iSelectPlottablesBeyondAxisRect),
+      54, uint(QCP::srmNone),
+      55, uint(QCP::srmZoom),
+      56, uint(QCP::srmSelect),
+      57, uint(QCP::srmCustom),
+      59, uint(QCP::stNone),
+      60, uint(QCP::stWhole),
+      61, uint(QCP::stSingleData),
+      62, uint(QCP::stDataRange),
+      63, uint(QCP::stMultipleDataRanges),
+
+       0        // eod
+};
+
+const QMetaObject QCP::staticMetaObject = { {
+    nullptr,
+    qt_meta_stringdata_QCP.offsetsAndSize,
+    qt_meta_data_QCP,
+    nullptr,
+    nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_QCP_t
+, QtPrivate::TypeAndForceComplete<void, std::true_type>
+
+
+
+>,
+    nullptr
+} };
+
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

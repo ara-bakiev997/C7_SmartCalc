@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
@@ -19,6 +18,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
+#include "qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -64,7 +64,7 @@ public:
     QGridLayout *gridLayout_2;
     QPushButton *pushButton_AC;
     QPushButton *pushButton_delete;
-    QCheckBox *checkBox_plot_graph;
+    QPushButton *pushButton;
     QLabel *Xmax;
     QDoubleSpinBox *doubleSpinBox_Xmax;
     QLabel *Ymax;
@@ -73,6 +73,7 @@ public:
     QDoubleSpinBox *doubleSpinBox_X_value;
     QLineEdit *string;
     QLineEdit *result;
+    QCustomPlot *widget;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -89,7 +90,7 @@ public:
         label_2->setGeometry(QRect(30, 220, 81, 41));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 270, 474, 170));
+        layoutWidget->setGeometry(QRect(20, 270, 517, 170));
         gridLayout_3 = new QGridLayout(layoutWidget);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -268,10 +269,10 @@ public:
 
         gridLayout_2->addWidget(pushButton_delete, 0, 1, 1, 1);
 
-        checkBox_plot_graph = new QCheckBox(layoutWidget);
-        checkBox_plot_graph->setObjectName(QString::fromUtf8("checkBox_plot_graph"));
+        pushButton = new QPushButton(layoutWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        gridLayout_2->addWidget(checkBox_plot_graph, 1, 0, 1, 2);
+        gridLayout_2->addWidget(pushButton, 1, 0, 1, 2);
 
 
         gridLayout_3->addLayout(gridLayout_2, 0, 1, 1, 2);
@@ -313,6 +314,9 @@ public:
         result = new QLineEdit(centralwidget);
         result->setObjectName(QString::fromUtf8("result"));
         result->setGeometry(QRect(120, 220, 371, 41));
+        widget = new QCustomPlot(centralwidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(580, 250, 291, 211));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -357,7 +361,7 @@ public:
         pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
         pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
         pushButton_delete->setText(QCoreApplication::translate("MainWindow", "<x", nullptr));
-        checkBox_plot_graph->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
         Xmax->setText(QCoreApplication::translate("MainWindow", "Xmax", nullptr));
         Ymax->setText(QCoreApplication::translate("MainWindow", "Ymax", nullptr));
         X_value->setText(QCoreApplication::translate("MainWindow", "X", nullptr));

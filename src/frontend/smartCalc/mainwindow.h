@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "qcustomplot.h"
+#include <qvector.h>
 
 extern "C" {
    #include "../../s21_smartcalc.h"
@@ -22,6 +23,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    double xBegin, xEnd, h, X;
+    int N;
+
+    QVector<double> x,y;
+
 
 private slots:
         void digits_and_operators();
@@ -30,5 +36,6 @@ private slots:
         void AC();
         void del();
 
+        void on_pushButton_clicked();
 };
 #endif // MAINWINDOW_H

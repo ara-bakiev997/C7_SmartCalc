@@ -45,7 +45,7 @@
      <rect>
       <x>20</x>
       <y>270</y>
-      <width>474</width>
+      <width>517</width>
       <height>170</height>
      </rect>
     </property>
@@ -305,7 +305,7 @@
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBox_plot_graph">
+        <widget class="QPushButton" name="pushButton">
          <property name="text">
           <string>Plot graph</string>
          </property>
@@ -368,8 +368,26 @@
      </rect>
     </property>
    </widget>
+   <widget class="QCustomPlot" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>250</y>
+      <width>291</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
