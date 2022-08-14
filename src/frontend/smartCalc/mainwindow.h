@@ -25,6 +25,7 @@ private:
 private slots:
         void digits_numbers();
         void calculate();
+        void AC();
 
 };
 #endif // MAINWINDOW_H
