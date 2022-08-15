@@ -100,20 +100,37 @@ void MainWindow::del() {
     ui->string->setText(new_label);
 }
 
+    /*PlotGraph*/
+double MainWindow::doubleSpinBox_Xmax() {
+    return ui->doubleSpinBox_Xmax->text().toDouble();
+}
+
+double MainWindow::doubleSpinBox_Xmin() {
+    return ui->doubleSpinBox_Xmin->text().toDouble();
+}
 
 void MainWindow::on_pushButton_clicked()
 {
+    QString new_label = ui->string->text();
+    QString value;
     h = 0.1;
-    xBegin = -3;
-    xEnd = 3 + h;
-    ui->widget->xAxis->setRange(-4, 4);
-    ui->widget->yAxis->setRange(0, 9);
-
-    N = (xEnd - xBegin)/h + 2;
+    xBegin = doubleSpinBox_Xmin();
+    xEnd = doubleSpinBox_Xmax();
+    ui->widget->xAxis->setRange(xBegin, xEnd);
+    ui->widget->yAxis->setRange(xBegin, xEnd);
+    Y = 0;
+//    N = (xEnd - xBegin)/h + 2;
 
     for(X = xBegin; X <= xEnd; X+= h) {
         x.push_back(X);
-        y.push_back(X*X);
+
+        value = new_label.replace("x", QString::number(X));
+        QByteArray str_bit = value.toLocal8Bit();
+        qDebug()<<value;
+        char *res_str = str_bit.data();
+        start(res_str, &Y);
+
+        y.push_back(Y);
     }
     ui->widget->addGraph();
     ui->widget->graph(0)->addData(x,y);
@@ -122,4 +139,8 @@ void MainWindow::on_pushButton_clicked()
 //    windowGraph.setModal(true);
 //    windowGraph.exec();
 }
+
+
+
+
 

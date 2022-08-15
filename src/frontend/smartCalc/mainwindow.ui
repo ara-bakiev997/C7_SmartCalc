@@ -50,7 +50,48 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="0" column="0" rowspan="4">
+     <item row="1" column="1">
+      <widget class="QLabel" name="X_value">
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButton_AC">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>AC</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_delete">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;x</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Plot graph</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="doubleSpinBox_X_value"/>
+     </item>
+     <item row="0" column="0" rowspan="2">
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QPushButton" name="pushButton_sqrt">
@@ -282,67 +323,6 @@
        </item>
       </layout>
      </item>
-     <item row="0" column="1" colspan="2">
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_AC">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>AC</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton_delete">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>&lt;x</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Plot graph</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="Xmax">
-       <property name="text">
-        <string>Xmax</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QDoubleSpinBox" name="doubleSpinBox_Xmax"/>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLabel" name="Ymax">
-       <property name="text">
-        <string>Ymax</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QDoubleSpinBox" name="doubleSpinBox_Ymax"/>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLabel" name="X_value">
-       <property name="text">
-        <string>X</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QDoubleSpinBox" name="doubleSpinBox_X_value"/>
-     </item>
     </layout>
    </widget>
    <widget class="QLineEdit" name="string">
@@ -376,6 +356,58 @@
       <width>291</width>
       <height>211</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Xmin">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>70</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Xmin</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_Xmin">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>70</y>
+      <width>56</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99999.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_Xmax">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>40</y>
+      <width>56</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-999.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Xmax">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>40</y>
+      <width>34</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Xmax</string>
     </property>
    </widget>
   </widget>

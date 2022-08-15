@@ -30,6 +30,12 @@ public:
     QLabel *label_2;
     QWidget *layoutWidget;
     QGridLayout *gridLayout_3;
+    QLabel *X_value;
+    QGridLayout *gridLayout_2;
+    QPushButton *pushButton_AC;
+    QPushButton *pushButton_delete;
+    QPushButton *pushButton;
+    QDoubleSpinBox *doubleSpinBox_X_value;
     QGridLayout *gridLayout;
     QPushButton *pushButton_sqrt;
     QPushButton *pushButton_mod;
@@ -61,19 +67,13 @@ public:
     QPushButton *pushButton_0;
     QPushButton *pushButton_dot;
     QPushButton *pushButton_equal;
-    QGridLayout *gridLayout_2;
-    QPushButton *pushButton_AC;
-    QPushButton *pushButton_delete;
-    QPushButton *pushButton;
-    QLabel *Xmax;
-    QDoubleSpinBox *doubleSpinBox_Xmax;
-    QLabel *Ymax;
-    QDoubleSpinBox *doubleSpinBox_Ymax;
-    QLabel *X_value;
-    QDoubleSpinBox *doubleSpinBox_X_value;
     QLineEdit *string;
     QLineEdit *result;
     QCustomPlot *widget;
+    QLabel *Xmin;
+    QDoubleSpinBox *doubleSpinBox_Xmin;
+    QDoubleSpinBox *doubleSpinBox_Xmax;
+    QLabel *Xmax;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -94,6 +94,38 @@ public:
         gridLayout_3 = new QGridLayout(layoutWidget);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        X_value = new QLabel(layoutWidget);
+        X_value->setObjectName(QString::fromUtf8("X_value"));
+
+        gridLayout_3->addWidget(X_value, 1, 1, 1, 1);
+
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        pushButton_AC = new QPushButton(layoutWidget);
+        pushButton_AC->setObjectName(QString::fromUtf8("pushButton_AC"));
+        pushButton_AC->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_2->addWidget(pushButton_AC, 0, 0, 1, 1);
+
+        pushButton_delete = new QPushButton(layoutWidget);
+        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
+        pushButton_delete->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_2->addWidget(pushButton_delete, 0, 1, 1, 1);
+
+        pushButton = new QPushButton(layoutWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout_2->addWidget(pushButton, 1, 0, 1, 2);
+
+
+        gridLayout_3->addLayout(gridLayout_2, 0, 1, 1, 2);
+
+        doubleSpinBox_X_value = new QDoubleSpinBox(layoutWidget);
+        doubleSpinBox_X_value->setObjectName(QString::fromUtf8("doubleSpinBox_X_value"));
+
+        gridLayout_3->addWidget(doubleSpinBox_X_value, 1, 2, 1, 1);
+
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         pushButton_sqrt = new QPushButton(layoutWidget);
@@ -253,59 +285,7 @@ public:
         gridLayout->addWidget(pushButton_equal, 4, 5, 1, 1);
 
 
-        gridLayout_3->addLayout(gridLayout, 0, 0, 4, 1);
-
-        gridLayout_2 = new QGridLayout();
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        pushButton_AC = new QPushButton(layoutWidget);
-        pushButton_AC->setObjectName(QString::fromUtf8("pushButton_AC"));
-        pushButton_AC->setStyleSheet(QString::fromUtf8(""));
-
-        gridLayout_2->addWidget(pushButton_AC, 0, 0, 1, 1);
-
-        pushButton_delete = new QPushButton(layoutWidget);
-        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
-        pushButton_delete->setStyleSheet(QString::fromUtf8(""));
-
-        gridLayout_2->addWidget(pushButton_delete, 0, 1, 1, 1);
-
-        pushButton = new QPushButton(layoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        gridLayout_2->addWidget(pushButton, 1, 0, 1, 2);
-
-
-        gridLayout_3->addLayout(gridLayout_2, 0, 1, 1, 2);
-
-        Xmax = new QLabel(layoutWidget);
-        Xmax->setObjectName(QString::fromUtf8("Xmax"));
-
-        gridLayout_3->addWidget(Xmax, 1, 1, 1, 1);
-
-        doubleSpinBox_Xmax = new QDoubleSpinBox(layoutWidget);
-        doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
-
-        gridLayout_3->addWidget(doubleSpinBox_Xmax, 1, 2, 1, 1);
-
-        Ymax = new QLabel(layoutWidget);
-        Ymax->setObjectName(QString::fromUtf8("Ymax"));
-
-        gridLayout_3->addWidget(Ymax, 2, 1, 1, 1);
-
-        doubleSpinBox_Ymax = new QDoubleSpinBox(layoutWidget);
-        doubleSpinBox_Ymax->setObjectName(QString::fromUtf8("doubleSpinBox_Ymax"));
-
-        gridLayout_3->addWidget(doubleSpinBox_Ymax, 2, 2, 1, 1);
-
-        X_value = new QLabel(layoutWidget);
-        X_value->setObjectName(QString::fromUtf8("X_value"));
-
-        gridLayout_3->addWidget(X_value, 3, 1, 1, 1);
-
-        doubleSpinBox_X_value = new QDoubleSpinBox(layoutWidget);
-        doubleSpinBox_X_value->setObjectName(QString::fromUtf8("doubleSpinBox_X_value"));
-
-        gridLayout_3->addWidget(doubleSpinBox_X_value, 3, 2, 1, 1);
+        gridLayout_3->addLayout(gridLayout, 0, 0, 2, 1);
 
         string = new QLineEdit(centralwidget);
         string->setObjectName(QString::fromUtf8("string"));
@@ -317,6 +297,20 @@ public:
         widget = new QCustomPlot(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(580, 250, 291, 211));
+        Xmin = new QLabel(centralwidget);
+        Xmin->setObjectName(QString::fromUtf8("Xmin"));
+        Xmin->setGeometry(QRect(560, 70, 31, 16));
+        doubleSpinBox_Xmin = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_Xmin->setObjectName(QString::fromUtf8("doubleSpinBox_Xmin"));
+        doubleSpinBox_Xmin->setGeometry(QRect(620, 70, 56, 21));
+        doubleSpinBox_Xmin->setMinimum(-99999.000000000000000);
+        doubleSpinBox_Xmax = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
+        doubleSpinBox_Xmax->setGeometry(QRect(620, 40, 56, 21));
+        doubleSpinBox_Xmax->setMinimum(-999.000000000000000);
+        Xmax = new QLabel(centralwidget);
+        Xmax->setObjectName(QString::fromUtf8("Xmax"));
+        Xmax->setGeometry(QRect(560, 40, 34, 16));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -329,6 +323,10 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "String", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "result", nullptr));
+        X_value->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
+        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "<x", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
         pushButton_sqrt->setText(QCoreApplication::translate("MainWindow", "sqrt", nullptr));
         pushButton_mod->setText(QCoreApplication::translate("MainWindow", "mod", nullptr));
         pushButton_x->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
@@ -359,12 +357,8 @@ public:
         pushButton_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         pushButton_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
-        pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
-        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "<x", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
+        Xmin->setText(QCoreApplication::translate("MainWindow", "Xmin", nullptr));
         Xmax->setText(QCoreApplication::translate("MainWindow", "Xmax", nullptr));
-        Ymax->setText(QCoreApplication::translate("MainWindow", "Ymax", nullptr));
-        X_value->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
     } // retranslateUi
 
 };

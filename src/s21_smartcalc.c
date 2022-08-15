@@ -79,6 +79,7 @@ int validation(char* str) {
     }
     if (str[i] == '.' && (!isdigit(prev) || !isdigit(next))) error = FAILURE;
     if (str[i] == '(' && next == ')') error = FAILURE;
+    if (prev == '(' && !isdigit(str[i]) && next == ')') error = FAILURE;
   }
   return error;
 }
