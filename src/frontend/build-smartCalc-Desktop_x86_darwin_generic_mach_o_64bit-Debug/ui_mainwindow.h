@@ -325,7 +325,7 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "result", nullptr));
         X_value->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
-        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "<x", nullptr));
+        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
         pushButton_sqrt->setText(QCoreApplication::translate("MainWindow", "sqrt", nullptr));
         pushButton_mod->setText(QCoreApplication::translate("MainWindow", "mod", nullptr));

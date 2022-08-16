@@ -9,6 +9,7 @@
 #define SUCCESS 1
 #define FAILURE 0
 #define SIZE_ARRAY sizeof(strF) / sizeof(strF[0])
+#define EPS 1e-7
 
 typedef enum {
   SIN,
