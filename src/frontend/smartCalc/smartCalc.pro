@@ -10,20 +10,23 @@ CONFIG += c++17
 
 SOURCES += \
     ../../s21_smartcalc.c \
+    credit.cpp \
+    deposit.cpp \
     main.cpp \
     mainwindow.cpp \
-    plotgraph.cpp \
     qcustomplot.cpp
 
 HEADERS += \
     ../../s21_smartcalc.h \
+    credit.h \
+    deposit.h \
     mainwindow.h \
-    plotgraph.h \
     qcustomplot.h
 
 FORMS += \
-    mainwindow.ui \
-    plotgraph.ui
+    credit.ui \
+    deposit.ui \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

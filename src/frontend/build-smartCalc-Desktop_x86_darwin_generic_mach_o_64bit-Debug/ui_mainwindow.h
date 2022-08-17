@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -26,17 +27,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *label;
-    QLabel *label_2;
+    QCustomPlot *widget;
     QWidget *layoutWidget;
-    QGridLayout *gridLayout_3;
-    QLabel *X_value;
-    QGridLayout *gridLayout_2;
-    QPushButton *pushButton_AC;
-    QPushButton *pushButton_delete;
-    QPushButton *pushButton;
-    QDoubleSpinBox *doubleSpinBox_X_value;
     QGridLayout *gridLayout;
+    QPushButton *pushButton_AC;
     QPushButton *pushButton_sqrt;
     QPushButton *pushButton_mod;
     QPushButton *pushButton_x;
@@ -67,250 +61,488 @@ public:
     QPushButton *pushButton_0;
     QPushButton *pushButton_dot;
     QPushButton *pushButton_equal;
+    QPushButton *pushButton_delete;
     QLineEdit *string;
     QLineEdit *result;
-    QCustomPlot *widget;
+    QWidget *layoutWidget1;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *pushButton;
+    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *Xmin;
     QDoubleSpinBox *doubleSpinBox_Xmin;
-    QDoubleSpinBox *doubleSpinBox_Xmax;
+    QHBoxLayout *horizontalLayout;
     QLabel *Xmax;
+    QDoubleSpinBox *doubleSpinBox_Xmax;
+    QWidget *layoutWidget2;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *pushButton_Credit;
+    QPushButton *pushButton_Deposit;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(918, 524);
+        MainWindow->resize(737, 351);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(30, 150, 71, 41));
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(30, 220, 81, 41));
+        widget = new QCustomPlot(centralwidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(450, 30, 281, 231));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 270, 517, 170));
-        gridLayout_3 = new QGridLayout(layoutWidget);
-        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        X_value = new QLabel(layoutWidget);
-        X_value->setObjectName(QString::fromUtf8("X_value"));
-
-        gridLayout_3->addWidget(X_value, 1, 1, 1, 1);
-
-        gridLayout_2 = new QGridLayout();
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        layoutWidget->setGeometry(QRect(12, 24, 428, 233));
+        gridLayout = new QGridLayout(layoutWidget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         pushButton_AC = new QPushButton(layoutWidget);
         pushButton_AC->setObjectName(QString::fromUtf8("pushButton_AC"));
-        pushButton_AC->setStyleSheet(QString::fromUtf8(""));
+        pushButton_AC->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout_2->addWidget(pushButton_AC, 0, 0, 1, 1);
+        gridLayout->addWidget(pushButton_AC, 1, 5, 1, 1);
 
-        pushButton_delete = new QPushButton(layoutWidget);
-        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
-        pushButton_delete->setStyleSheet(QString::fromUtf8(""));
-
-        gridLayout_2->addWidget(pushButton_delete, 0, 1, 1, 1);
-
-        pushButton = new QPushButton(layoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        gridLayout_2->addWidget(pushButton, 1, 0, 1, 2);
-
-
-        gridLayout_3->addLayout(gridLayout_2, 0, 1, 1, 2);
-
-        doubleSpinBox_X_value = new QDoubleSpinBox(layoutWidget);
-        doubleSpinBox_X_value->setObjectName(QString::fromUtf8("doubleSpinBox_X_value"));
-
-        gridLayout_3->addWidget(doubleSpinBox_X_value, 1, 2, 1, 1);
-
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         pushButton_sqrt = new QPushButton(layoutWidget);
         pushButton_sqrt->setObjectName(QString::fromUtf8("pushButton_sqrt"));
+        pushButton_sqrt->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_sqrt, 0, 0, 1, 1);
+        gridLayout->addWidget(pushButton_sqrt, 2, 0, 1, 1);
 
         pushButton_mod = new QPushButton(layoutWidget);
         pushButton_mod->setObjectName(QString::fromUtf8("pushButton_mod"));
-        pushButton_mod->setStyleSheet(QString::fromUtf8(""));
+        pushButton_mod->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_mod, 0, 1, 1, 1);
+        gridLayout->addWidget(pushButton_mod, 2, 1, 1, 1);
 
         pushButton_x = new QPushButton(layoutWidget);
         pushButton_x->setObjectName(QString::fromUtf8("pushButton_x"));
+        pushButton_x->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_x, 0, 2, 1, 1);
+        gridLayout->addWidget(pushButton_x, 2, 2, 1, 1);
 
         pushButton_openBracket = new QPushButton(layoutWidget);
         pushButton_openBracket->setObjectName(QString::fromUtf8("pushButton_openBracket"));
+        pushButton_openBracket->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_openBracket, 0, 3, 1, 1);
+        gridLayout->addWidget(pushButton_openBracket, 2, 3, 1, 1);
 
         pushButton_closeBracket = new QPushButton(layoutWidget);
         pushButton_closeBracket->setObjectName(QString::fromUtf8("pushButton_closeBracket"));
+        pushButton_closeBracket->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_closeBracket, 0, 4, 1, 1);
+        gridLayout->addWidget(pushButton_closeBracket, 2, 4, 1, 1);
 
         pushButton_div = new QPushButton(layoutWidget);
         pushButton_div->setObjectName(QString::fromUtf8("pushButton_div"));
-        pushButton_div->setStyleSheet(QString::fromUtf8(""));
+        pushButton_div->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_div, 0, 5, 1, 1);
+        gridLayout->addWidget(pushButton_div, 2, 5, 1, 1);
 
         pushButton_ln = new QPushButton(layoutWidget);
         pushButton_ln->setObjectName(QString::fromUtf8("pushButton_ln"));
+        pushButton_ln->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_ln, 1, 0, 1, 1);
+        gridLayout->addWidget(pushButton_ln, 3, 0, 1, 1);
 
         pushButton_log = new QPushButton(layoutWidget);
         pushButton_log->setObjectName(QString::fromUtf8("pushButton_log"));
+        pushButton_log->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_log, 1, 1, 1, 1);
+        gridLayout->addWidget(pushButton_log, 3, 1, 1, 1);
 
         pushButton_7 = new QPushButton(layoutWidget);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
+        pushButton_7->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_7, 1, 2, 1, 1);
+        gridLayout->addWidget(pushButton_7, 3, 2, 1, 1);
 
         pushButton_8 = new QPushButton(layoutWidget);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
+        pushButton_8->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_8, 1, 3, 1, 1);
+        gridLayout->addWidget(pushButton_8, 3, 3, 1, 1);
 
         pushButton_9 = new QPushButton(layoutWidget);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
+        pushButton_9->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_9, 1, 4, 1, 1);
+        gridLayout->addWidget(pushButton_9, 3, 4, 1, 1);
 
         pushButton_mul = new QPushButton(layoutWidget);
         pushButton_mul->setObjectName(QString::fromUtf8("pushButton_mul"));
-        pushButton_mul->setStyleSheet(QString::fromUtf8(""));
+        pushButton_mul->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_mul, 1, 5, 1, 1);
+        gridLayout->addWidget(pushButton_mul, 3, 5, 1, 1);
 
         pushButton_atan = new QPushButton(layoutWidget);
         pushButton_atan->setObjectName(QString::fromUtf8("pushButton_atan"));
+        pushButton_atan->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_atan, 2, 0, 1, 1);
+        gridLayout->addWidget(pushButton_atan, 4, 0, 1, 1);
 
         pushButton_tan = new QPushButton(layoutWidget);
         pushButton_tan->setObjectName(QString::fromUtf8("pushButton_tan"));
+        pushButton_tan->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_tan, 2, 1, 1, 1);
+        gridLayout->addWidget(pushButton_tan, 4, 1, 1, 1);
 
         pushButton_4 = new QPushButton(layoutWidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_4, 2, 2, 1, 1);
+        gridLayout->addWidget(pushButton_4, 4, 2, 1, 1);
 
         pushButton_5 = new QPushButton(layoutWidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_5, 2, 3, 1, 1);
+        gridLayout->addWidget(pushButton_5, 4, 3, 1, 1);
 
         pushButton_6 = new QPushButton(layoutWidget);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        pushButton_6->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_6, 2, 4, 1, 1);
+        gridLayout->addWidget(pushButton_6, 4, 4, 1, 1);
 
         pushButton_sub = new QPushButton(layoutWidget);
         pushButton_sub->setObjectName(QString::fromUtf8("pushButton_sub"));
-        pushButton_sub->setStyleSheet(QString::fromUtf8(""));
+        pushButton_sub->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_sub, 2, 5, 1, 1);
+        gridLayout->addWidget(pushButton_sub, 4, 5, 1, 1);
 
         pushButton_acos = new QPushButton(layoutWidget);
         pushButton_acos->setObjectName(QString::fromUtf8("pushButton_acos"));
+        pushButton_acos->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_acos, 3, 0, 1, 1);
+        gridLayout->addWidget(pushButton_acos, 5, 0, 1, 1);
 
         pushButton_cos = new QPushButton(layoutWidget);
         pushButton_cos->setObjectName(QString::fromUtf8("pushButton_cos"));
+        pushButton_cos->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_cos, 3, 1, 1, 1);
+        gridLayout->addWidget(pushButton_cos, 5, 1, 1, 1);
 
         pushButton_1 = new QPushButton(layoutWidget);
         pushButton_1->setObjectName(QString::fromUtf8("pushButton_1"));
+        pushButton_1->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_1, 3, 2, 1, 1);
+        gridLayout->addWidget(pushButton_1, 5, 2, 1, 1);
 
         pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_2, 3, 3, 1, 1);
+        gridLayout->addWidget(pushButton_2, 5, 3, 1, 1);
 
         pushButton_3 = new QPushButton(layoutWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_3, 3, 4, 1, 1);
+        gridLayout->addWidget(pushButton_3, 5, 4, 1, 1);
 
         pushButton_sum = new QPushButton(layoutWidget);
         pushButton_sum->setObjectName(QString::fromUtf8("pushButton_sum"));
-        pushButton_sum->setStyleSheet(QString::fromUtf8(""));
+        pushButton_sum->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_sum, 3, 5, 1, 1);
+        gridLayout->addWidget(pushButton_sum, 5, 5, 1, 1);
 
         pushButton_asin = new QPushButton(layoutWidget);
         pushButton_asin->setObjectName(QString::fromUtf8("pushButton_asin"));
+        pushButton_asin->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_asin, 4, 0, 1, 1);
+        gridLayout->addWidget(pushButton_asin, 6, 0, 1, 1);
 
         pushButton_sin = new QPushButton(layoutWidget);
         pushButton_sin->setObjectName(QString::fromUtf8("pushButton_sin"));
+        pushButton_sin->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_sin, 4, 1, 1, 1);
+        gridLayout->addWidget(pushButton_sin, 6, 1, 1, 1);
 
         pushButton_pow = new QPushButton(layoutWidget);
         pushButton_pow->setObjectName(QString::fromUtf8("pushButton_pow"));
+        pushButton_pow->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_pow, 4, 2, 1, 1);
+        gridLayout->addWidget(pushButton_pow, 6, 2, 1, 1);
 
         pushButton_0 = new QPushButton(layoutWidget);
         pushButton_0->setObjectName(QString::fromUtf8("pushButton_0"));
+        pushButton_0->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(pushButton_0, 4, 3, 1, 1);
+        gridLayout->addWidget(pushButton_0, 6, 3, 1, 1);
 
         pushButton_dot = new QPushButton(layoutWidget);
         pushButton_dot->setObjectName(QString::fromUtf8("pushButton_dot"));
+        pushButton_dot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(215, 215, 215);\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_dot, 4, 4, 1, 1);
+        gridLayout->addWidget(pushButton_dot, 6, 4, 1, 1);
 
         pushButton_equal = new QPushButton(layoutWidget);
         pushButton_equal->setObjectName(QString::fromUtf8("pushButton_equal"));
-        pushButton_equal->setStyleSheet(QString::fromUtf8(""));
+        pushButton_equal->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout->addWidget(pushButton_equal, 4, 5, 1, 1);
+        gridLayout->addWidget(pushButton_equal, 6, 5, 1, 1);
 
+        pushButton_delete = new QPushButton(layoutWidget);
+        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
+        pushButton_delete->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 151, 57);\n"
+"  color: white; \n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
+"}"));
 
-        gridLayout_3->addLayout(gridLayout, 0, 0, 2, 1);
+        gridLayout->addWidget(pushButton_delete, 0, 5, 1, 1);
 
-        string = new QLineEdit(centralwidget);
+        string = new QLineEdit(layoutWidget);
         string->setObjectName(QString::fromUtf8("string"));
-        string->setGeometry(QRect(120, 150, 371, 41));
+        string->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"  qproperty-alignment: 'AlignVCenter | AlignRight';\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"background-color : white;"));
         string->setReadOnly(false);
-        result = new QLineEdit(centralwidget);
+
+        gridLayout->addWidget(string, 0, 0, 1, 5);
+
+        result = new QLineEdit(layoutWidget);
         result->setObjectName(QString::fromUtf8("result"));
-        result->setGeometry(QRect(120, 220, 371, 41));
-        widget = new QCustomPlot(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(580, 250, 291, 211));
-        Xmin = new QLabel(centralwidget);
+        result->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"  qproperty-alignment: 'AlignVCenter | AlignRight';\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"background-color : white;"));
+
+        gridLayout->addWidget(result, 1, 0, 1, 5);
+
+        layoutWidget1 = new QWidget(centralwidget);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(412, 270, 321, 31));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(layoutWidget1);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_4->addWidget(pushButton);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        Xmin = new QLabel(layoutWidget1);
         Xmin->setObjectName(QString::fromUtf8("Xmin"));
-        Xmin->setGeometry(QRect(560, 70, 31, 16));
-        doubleSpinBox_Xmin = new QDoubleSpinBox(centralwidget);
+
+        horizontalLayout_2->addWidget(Xmin);
+
+        doubleSpinBox_Xmin = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox_Xmin->setObjectName(QString::fromUtf8("doubleSpinBox_Xmin"));
-        doubleSpinBox_Xmin->setGeometry(QRect(620, 70, 56, 21));
-        doubleSpinBox_Xmin->setMinimum(-99999.000000000000000);
-        doubleSpinBox_Xmax = new QDoubleSpinBox(centralwidget);
-        doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
-        doubleSpinBox_Xmax->setGeometry(QRect(620, 40, 56, 21));
-        doubleSpinBox_Xmax->setMinimum(-999.000000000000000);
-        Xmax = new QLabel(centralwidget);
+        doubleSpinBox_Xmin->setMinimum(-999.000000000000000);
+
+        horizontalLayout_2->addWidget(doubleSpinBox_Xmin);
+
+
+        horizontalLayout_3->addLayout(horizontalLayout_2);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        Xmax = new QLabel(layoutWidget1);
         Xmax->setObjectName(QString::fromUtf8("Xmax"));
-        Xmax->setGeometry(QRect(560, 40, 34, 16));
+
+        horizontalLayout->addWidget(Xmax);
+
+        doubleSpinBox_Xmax = new QDoubleSpinBox(layoutWidget1);
+        doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
+        doubleSpinBox_Xmax->setMinimum(-999.000000000000000);
+
+        horizontalLayout->addWidget(doubleSpinBox_Xmax);
+
+
+        horizontalLayout_3->addLayout(horizontalLayout);
+
+
+        horizontalLayout_4->addLayout(horizontalLayout_3);
+
+        layoutWidget2 = new QWidget(centralwidget);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(10, 270, 386, 32));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget2);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        pushButton_Credit = new QPushButton(layoutWidget2);
+        pushButton_Credit->setObjectName(QString::fromUtf8("pushButton_Credit"));
+
+        horizontalLayout_5->addWidget(pushButton_Credit);
+
+        pushButton_Deposit = new QPushButton(layoutWidget2);
+        pushButton_Deposit->setObjectName(QString::fromUtf8("pushButton_Deposit"));
+
+        horizontalLayout_5->addWidget(pushButton_Deposit);
+
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -321,12 +553,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "String", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "result", nullptr));
-        X_value->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         pushButton_AC->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));
-        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
         pushButton_sqrt->setText(QCoreApplication::translate("MainWindow", "sqrt", nullptr));
         pushButton_mod->setText(QCoreApplication::translate("MainWindow", "mod", nullptr));
         pushButton_x->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
@@ -357,8 +584,12 @@ public:
         pushButton_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         pushButton_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
+        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
         Xmin->setText(QCoreApplication::translate("MainWindow", "Xmin", nullptr));
         Xmax->setText(QCoreApplication::translate("MainWindow", "Xmax", nullptr));
+        pushButton_Credit->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\265\320\264\320\270\321\202\320\275\321\213\320\271 \320\272\320\260\320\273\321\214\320\272\321\203\320\273\321\217\321\202\320\276\321\200", nullptr));
+        pushButton_Deposit->setText(QCoreApplication::translate("MainWindow", "\320\224\320\265\320\277\320\276\320\267\320\270\321\202\320\275\321\213\320\271 \320\272\320\260\320\273\321\214\320\272\321\203\320\273\321\217\321\202\320\276\321\200", nullptr));
     } // retranslateUi
 
 };

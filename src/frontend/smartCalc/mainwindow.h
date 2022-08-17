@@ -41,5 +41,7 @@ private slots:
         double doubleSpinBox_Xmax();
         double doubleSpinBox_Xmin();
 
+        void on_pushButton_Deposit_clicked();
+        void on_pushButton_Credit_clicked();
 };
 #endif // MAINWINDOW_H

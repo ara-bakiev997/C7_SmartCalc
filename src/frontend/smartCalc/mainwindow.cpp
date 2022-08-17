@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "plotgraph.h"
+#include "credit.h"
+#include "deposit.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -89,12 +90,13 @@ void MainWindow::calculate() {
 }
 
 void MainWindow::AC() {
-//    ui->widget->close();
-//    ui->setupUi(this);
     ui->string->setText("");
     ui->result->setText("");
-    ui->widget->graph(0)->data()->clear();
+    ui->widget->clearGraphs();
+    x.clear();
+    y.clear();
     ui->widget->replot();
+
 }
 
 void MainWindow::del() {
@@ -114,8 +116,7 @@ double MainWindow::doubleSpinBox_Xmin() {
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->widget->graph(0)->data()->clear();
-    ui->widget->replot();
+    ui->widget->clearGraphs();
     QString new_label = ui->string->text();
            QString value, origin_string;
            h = 0.1;
@@ -124,8 +125,6 @@ void MainWindow::on_pushButton_clicked()
            ui->widget->xAxis->setRange(xBegin, xEnd);
            ui->widget->yAxis->setRange(xBegin, xEnd);
            Y = 0;
-       //    N = (xEnd - xBegin)/h + 2;
-
            for(X = xBegin; X <= xEnd; X+= h) {
                if (fabs(X) < EPS) X = 0;
                x.push_back(X);
@@ -143,12 +142,23 @@ void MainWindow::on_pushButton_clicked()
            ui->widget->addGraph();
            ui->widget->graph(0)->addData(x,y);
            ui->widget->replot();
-       //    PlotGraph windowGraph;
-       //    windowGraph.setModal(true);
-       //    windowGraph.exec();
+           ui->widget->update();
+           x.clear();
+           y.clear();
+}
+
+void MainWindow::on_pushButton_Deposit_clicked()
+{
+    deposit window;
+    window.setModal(true);
+    window.exec();
 }
 
 
-
-
+void MainWindow::on_pushButton_Credit_clicked()
+{
+    credit window;
+    window.setModal(true);
+    window.exec();
+}
 
