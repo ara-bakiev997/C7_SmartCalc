@@ -995,16 +995,12 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_credit.h ui_debit.h ui_debit.h ui_mainwindow.h
+compiler_uic_make_all: ui_credit.h ui_debit.h ui_mainwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_credit.h ui_debit.h ui_debit.h ui_mainwindow.h
+	-$(DEL_FILE) ui_credit.h ui_debit.h ui_mainwindow.h
 ui_credit.h: frontend/smartCalc/credit.ui \
 		/usr/local/share/qt/libexec/uic
 	/usr/local/share/qt/libexec/uic frontend/smartCalc/credit.ui -o ui_credit.h
-
-ui_debit.h: frontend/smartCalc/debit.ui \
-		/usr/local/share/qt/libexec/uic
-	/usr/local/share/qt/libexec/uic frontend/smartCalc/debit.ui -o ui_debit.h
 
 ui_debit.h: frontend/smartCalc/debit.ui \
 		/usr/local/share/qt/libexec/uic
@@ -1132,7 +1128,7 @@ uninstall: uninstall_target  FORCE
 FORCE:
 
 clean_back:
-	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c
+	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c smartCalc.app
 
 
 dvi: 
@@ -1156,7 +1152,7 @@ gcov_report: tests
 	genhtml -o report rep.info
 	open report/index.html
 
-check:
+check_back:
 	cppcheck --enable=all --suppress=missingIncludeSystem --inconclusive --check-config $(SOURCE) *.h
 	cp ../materials/linters/CPPLINT.cfg CPPLINT.cfg
 	-python3 ../materials/linters/cpplint.py --extensions=c $(SOURCE) *.h
