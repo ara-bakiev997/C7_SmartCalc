@@ -11,7 +11,7 @@ CONFIG += c++17
 SOURCES += \
     ../../s21_smartcalc.c \
     credit.cpp \
-    deposit.cpp \
+    debit.cpp \
     main.cpp \
     mainwindow.cpp \
     qcustomplot.cpp
@@ -19,13 +19,14 @@ SOURCES += \
 HEADERS += \
     ../../s21_smartcalc.h \
     credit.h \
-    deposit.h \
+    debit.h \
     mainwindow.h \
     qcustomplot.h
 
 FORMS += \
     credit.ui \
-    deposit.ui \
+    debit.ui \
+    debit.ui \
     mainwindow.ui
 
 # Default rules for deployment.

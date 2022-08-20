@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "credit.h"
-#include "deposit.h"
+#include "debit.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -145,17 +145,21 @@ void MainWindow::on_pushButton_clicked()
            y.clear();
 }
 
-void MainWindow::on_pushButton_Deposit_clicked()
-{
-    deposit window;
-    window.setModal(true);
-    window.exec();
-}
+
+
 
 
 void MainWindow::on_pushButton_Credit_clicked()
 {
     credit window;
+    window.setModal(true);
+    window.exec();
+}
+
+
+void MainWindow::on_pushButton_Deposit_clicked()
+{
+    debit window;
     window.setModal(true);
     window.exec();
 }

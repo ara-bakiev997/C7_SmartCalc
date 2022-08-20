@@ -41,15 +41,15 @@ QT_MOC_LITERAL(56, 3), // "del"
 QT_MOC_LITERAL(60, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(82, 18), // "doubleSpinBox_Xmax"
 QT_MOC_LITERAL(101, 18), // "doubleSpinBox_Xmin"
-QT_MOC_LITERAL(120, 29), // "on_pushButton_Deposit_clicked"
-QT_MOC_LITERAL(150, 28) // "on_pushButton_Credit_clicked"
+QT_MOC_LITERAL(120, 28), // "on_pushButton_Credit_clicked"
+QT_MOC_LITERAL(149, 29) // "on_pushButton_Deposit_clicked"
 
     },
     "MainWindow\0digits_and_operators\0\0"
     "functions\0calculate\0AC\0del\0"
     "on_pushButton_clicked\0doubleSpinBox_Xmax\0"
-    "doubleSpinBox_Xmin\0on_pushButton_Deposit_clicked\0"
-    "on_pushButton_Credit_clicked"
+    "doubleSpinBox_Xmin\0on_pushButton_Credit_clicked\0"
+    "on_pushButton_Deposit_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -109,8 +109,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             if (_a[0]) *reinterpret_cast< double*>(_a[0]) = std::move(_r); }  break;
         case 7: { double _r = _t->doubleSpinBox_Xmin();
             if (_a[0]) *reinterpret_cast< double*>(_a[0]) = std::move(_r); }  break;
-        case 8: _t->on_pushButton_Deposit_clicked(); break;
-        case 9: _t->on_pushButton_Credit_clicked(); break;
+        case 8: _t->on_pushButton_Credit_clicked(); break;
+        case 9: _t->on_pushButton_Deposit_clicked(); break;
         default: ;
         }
     }

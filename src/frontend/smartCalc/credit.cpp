@@ -1,5 +1,6 @@
 #include "credit.h"
 #include "ui_credit.h"
+#include "mainwindow.h"
 
 credit::credit(QWidget *parent) :
     QDialog(parent),
@@ -12,7 +13,6 @@ credit::~credit()
 {
     delete ui;
 }
-
 
 void credit::on_calculate_clicked()
 {

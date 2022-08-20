@@ -7,7 +7,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -82,7 +82,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -144,10 +144,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/deposit.cpp"
+        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/debit.cpp"
     ],
     "directory": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/deposit.cpp"
+    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/debit.cpp"
 },
 {
     "arguments": [
@@ -157,7 +157,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -232,7 +232,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -307,7 +307,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -382,7 +382,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -457,7 +457,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -532,7 +532,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -594,10 +594,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/deposit.h"
+        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/debit.h"
     ],
     "directory": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/deposit.h"
+    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/debit.h"
 },
 {
     "arguments": [
@@ -607,7 +607,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -682,7 +682,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -757,7 +757,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -832,7 +832,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -907,7 +907,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -969,10 +969,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_deposit.h"
+        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_debit.h"
     ],
     "directory": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_deposit.h"
+    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_debit.h"
 },
 {
     "arguments": [
@@ -982,7 +982,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1053,7 +1053,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1124,7 +1124,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1195,7 +1195,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1253,10 +1253,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/deposit.h"
+        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/debit.h"
     ],
     "directory": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/deposit.h"
+    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc/debit.h"
 },
 {
     "arguments": [
@@ -1266,7 +1266,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1337,7 +1337,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1408,7 +1408,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1479,7 +1479,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1550,7 +1550,7 @@
         "-I",
         "/opt/goinfre/tysaneno/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-iiJrfj/clang-uiheader-IMnYmX",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vxc400yzb1/T/QtCreator-nLqJUy/clang-uiheader-UZdCpu",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1608,9 +1608,9 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_deposit.h"
+        "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_debit.h"
     ],
     "directory": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_deposit.h"
+    "file": "/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_debit.h"
 }
 ]

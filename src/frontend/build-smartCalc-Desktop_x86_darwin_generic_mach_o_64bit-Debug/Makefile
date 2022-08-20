@@ -54,21 +54,21 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../../s21_smartcalc.c \
 		../smartCalc/credit.cpp \
-		../smartCalc/deposit.cpp \
+		../smartCalc/debit.cpp \
 		../smartCalc/main.cpp \
 		../smartCalc/mainwindow.cpp \
 		../smartCalc/qcustomplot.cpp moc_credit.cpp \
-		moc_deposit.cpp \
+		moc_debit.cpp \
 		moc_mainwindow.cpp \
 		moc_qcustomplot.cpp
 OBJECTS       = s21_smartcalc.o \
 		credit.o \
-		deposit.o \
+		debit.o \
 		main.o \
 		mainwindow.o \
 		qcustomplot.o \
 		moc_credit.o \
-		moc_deposit.o \
+		moc_debit.o \
 		moc_mainwindow.o \
 		moc_qcustomplot.o
 DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
@@ -328,11 +328,11 @@ DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/share/qt/mkspecs/features/lex.prf \
 		../smartCalc/smartCalc.pro ../../s21_smartcalc.h \
 		../smartCalc/credit.h \
-		../smartCalc/deposit.h \
+		../smartCalc/debit.h \
 		../smartCalc/mainwindow.h \
 		../smartCalc/qcustomplot.h ../../s21_smartcalc.c \
 		../smartCalc/credit.cpp \
-		../smartCalc/deposit.cpp \
+		../smartCalc/debit.cpp \
 		../smartCalc/main.cpp \
 		../smartCalc/mainwindow.cpp \
 		../smartCalc/qcustomplot.cpp
@@ -356,7 +356,7 @@ include /usr/local/share/qt/mkspecs/features/mac/sdk.mk
 first: all
 ####### Build rules
 
-smartCalc.app/Contents/MacOS/smartCalc: ui_credit.h ui_deposit.h ui_mainwindow.h $(OBJECTS)  
+smartCalc.app/Contents/MacOS/smartCalc: ui_credit.h ui_debit.h ui_mainwindow.h $(OBJECTS)  
 	@test -d smartCalc.app/Contents/MacOS/ || mkdir -p smartCalc.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -911,9 +911,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../s21_smartcalc.h ../smartCalc/credit.h ../smartCalc/deposit.h ../smartCalc/mainwindow.h ../smartCalc/qcustomplot.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../s21_smartcalc.c ../smartCalc/credit.cpp ../smartCalc/deposit.cpp ../smartCalc/main.cpp ../smartCalc/mainwindow.cpp ../smartCalc/qcustomplot.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../smartCalc/credit.ui ../smartCalc/deposit.ui ../smartCalc/mainwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../../s21_smartcalc.h ../smartCalc/credit.h ../smartCalc/debit.h ../smartCalc/mainwindow.h ../smartCalc/qcustomplot.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../s21_smartcalc.c ../smartCalc/credit.cpp ../smartCalc/debit.cpp ../smartCalc/main.cpp ../smartCalc/mainwindow.cpp ../smartCalc/qcustomplot.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../smartCalc/credit.ui ../smartCalc/debit.ui ../smartCalc/debit.ui ../smartCalc/mainwindow.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -948,9 +948,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/local/share/qt/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11 -Wall -Wextra -dM -E -o moc_predefs.h /usr/local/share/qt/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_credit.cpp moc_deposit.cpp moc_mainwindow.cpp moc_qcustomplot.cpp
+compiler_moc_header_make_all: moc_credit.cpp moc_debit.cpp moc_mainwindow.cpp moc_qcustomplot.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_credit.cpp moc_deposit.cpp moc_mainwindow.cpp moc_qcustomplot.cpp
+	-$(DEL_FILE) moc_credit.cpp moc_debit.cpp moc_mainwindow.cpp moc_qcustomplot.cpp
 moc_credit.cpp: ../smartCalc/credit.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QDialog \
 		/usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -958,12 +958,12 @@ moc_credit.cpp: ../smartCalc/credit.h \
 		/usr/local/share/qt/libexec/moc
 	/usr/local/share/qt/libexec/moc $(DEFINES) --include '/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h' -I/usr/local/share/qt/mkspecs/macx-clang -I'/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc' -I/usr/local/lib/QtPrintSupport.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../smartCalc/credit.h -o moc_credit.cpp
 
-moc_deposit.cpp: ../smartCalc/deposit.h \
+moc_debit.cpp: ../smartCalc/debit.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QDialog \
 		/usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include '/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h' -I/usr/local/share/qt/mkspecs/macx-clang -I'/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc' -I/usr/local/lib/QtPrintSupport.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../smartCalc/deposit.h -o moc_deposit.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include '/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/build-smartCalc-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h' -I/usr/local/share/qt/mkspecs/macx-clang -I'/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src/frontend/smartCalc' -I/usr/local/lib/QtPrintSupport.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../smartCalc/debit.h -o moc_debit.cpp
 
 moc_mainwindow.cpp: ../smartCalc/mainwindow.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -990,16 +990,16 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_credit.h ui_deposit.h ui_mainwindow.h
+compiler_uic_make_all: ui_credit.h ui_debit.h ui_debit.h ui_mainwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_credit.h ui_deposit.h ui_mainwindow.h
+	-$(DEL_FILE) ui_credit.h ui_debit.h ui_debit.h ui_mainwindow.h
 ui_credit.h: ../smartCalc/credit.ui \
 		/usr/local/share/qt/libexec/uic
 	/usr/local/share/qt/libexec/uic ../smartCalc/credit.ui -o ui_credit.h
 
-ui_deposit.h: ../smartCalc/deposit.ui \
+ui_debit.h: ../smartCalc/debit.ui \
 		/usr/local/share/qt/libexec/uic
-	/usr/local/share/qt/libexec/uic ../smartCalc/deposit.ui -o ui_deposit.h
+	/usr/local/share/qt/libexec/uic ../smartCalc/debit.ui -o ui_debit.h
 
 ui_mainwindow.h: ../smartCalc/mainwindow.ui \
 		/usr/local/share/qt/libexec/uic \
@@ -1030,11 +1030,11 @@ credit.o: ../smartCalc/credit.cpp ../smartCalc/credit.h \
 		ui_credit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o credit.o ../smartCalc/credit.cpp
 
-deposit.o: ../smartCalc/deposit.cpp ../smartCalc/deposit.h \
+debit.o: ../smartCalc/debit.cpp ../smartCalc/debit.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QDialog \
 		/usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
-		ui_deposit.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o deposit.o ../smartCalc/deposit.cpp
+		ui_debit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debit.o ../smartCalc/debit.cpp
 
 main.o: ../smartCalc/main.cpp ../smartCalc/mainwindow.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -1074,8 +1074,8 @@ qcustomplot.o: ../smartCalc/qcustomplot.cpp ../smartCalc/qcustomplot.h \
 moc_credit.o: moc_credit.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_credit.o moc_credit.cpp
 
-moc_deposit.o: moc_deposit.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_deposit.o moc_deposit.cpp
+moc_debit.o: moc_debit.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_debit.o moc_debit.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

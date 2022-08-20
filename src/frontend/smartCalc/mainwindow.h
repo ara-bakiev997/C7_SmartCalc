@@ -42,7 +42,7 @@ private slots:
         void on_pushButton_clicked();
         double doubleSpinBox_Xmax();
         double doubleSpinBox_Xmin();
-        void on_pushButton_Deposit_clicked();
         void on_pushButton_Credit_clicked();
+        void on_pushButton_Deposit_clicked();
 };
 #endif // MAINWINDOW_H

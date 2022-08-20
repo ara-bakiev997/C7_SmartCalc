@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SecondWindow</class>
- <widget class="QDialog" name="SecondWindow">
+ <class>credit</class>
+ <widget class="QDialog" name="credit">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>525</width>
-    <height>600</height>
+    <width>634</width>
+    <height>637</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_7">
+  <layout class="QVBoxLayout" name="verticalLayout_33">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_6">
+    <layout class="QVBoxLayout" name="verticalLayout_25">
      <item>
       <widget class="QRadioButton" name="annuit">
        <property name="text">
@@ -33,9 +33,9 @@
     </layout>
    </item>
    <item>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QGridLayout" name="gridLayout_5">
      <item row="0" column="0">
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QVBoxLayout" name="verticalLayout_26">
        <item>
         <widget class="QLabel" name="label_sum">
          <property name="text">
@@ -56,9 +56,9 @@
       </layout>
      </item>
      <item row="0" column="1">
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_27">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
          <item>
           <widget class="QLabel" name="label_limit">
            <property name="text">
@@ -84,7 +84,7 @@
       </layout>
      </item>
      <item row="0" column="2">
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_28">
        <item>
         <widget class="QLabel" name="label_percent">
          <property name="enabled">
@@ -113,7 +113,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_5">
+    <layout class="QVBoxLayout" name="verticalLayout_31">
      <item>
       <widget class="QPushButton" name="calculate">
        <property name="minimumSize">
@@ -137,7 +137,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="verticalSpacer">
+      <spacer name="verticalSpacer_6">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -150,7 +150,7 @@
       </spacer>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QVBoxLayout" name="verticalLayout_32">
        <item>
         <widget class="QLabel" name="label_pay">
          <property name="text">
@@ -171,7 +171,7 @@ font: italic 14pt &quot;Helvetica&quot;;</string>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <layout class="QHBoxLayout" name="horizontalLayout_18">
      <item>
       <widget class="QLabel" name="label_overpayment">
        <property name="enabled">
@@ -205,7 +205,7 @@ font: italic 14pt &quot;Helvetica&quot;;</string>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_19">
      <item>
       <widget class="QLabel" name="label_total_sum">
        <property name="enabled">
