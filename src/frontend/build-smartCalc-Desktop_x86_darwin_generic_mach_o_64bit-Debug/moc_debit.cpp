@@ -22,17 +22,27 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_debit_t {
-    const uint offsetsAndSize[2];
-    char stringdata0[6];
+    const uint offsetsAndSize[14];
+    char stringdata0[147];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_debit_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_debit_t qt_meta_stringdata_debit = {
     {
-QT_MOC_LITERAL(0, 5) // "debit"
+QT_MOC_LITERAL(0, 5), // "debit"
+QT_MOC_LITERAL(6, 31), // "on_pushButton_calculate_clicked"
+QT_MOC_LITERAL(38, 0), // ""
+QT_MOC_LITERAL(39, 25), // "on_pushButton_del_clicked"
+QT_MOC_LITERAL(65, 25), // "on_pushButton_add_clicked"
+QT_MOC_LITERAL(91, 27), // "on_pushButton_del_2_clicked"
+QT_MOC_LITERAL(119, 27) // "on_pushButton_add_2_clicked"
 
     },
-    "debit"
+    "debit\0on_pushButton_calculate_clicked\0"
+    "\0on_pushButton_del_clicked\0"
+    "on_pushButton_add_clicked\0"
+    "on_pushButton_del_2_clicked\0"
+    "on_pushButton_add_2_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -42,22 +52,46 @@ static const uint qt_meta_data_debit[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    0,   45,    2, 0x08,    2 /* Private */,
+       4,    0,   46,    2, 0x08,    3 /* Private */,
+       5,    0,   47,    2, 0x08,    4 /* Private */,
+       6,    0,   48,    2, 0x08,    5 /* Private */,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Double,
+    QMetaType::Void,
+    QMetaType::Double,
+    QMetaType::Void,
+
        0        // eod
 };
 
 void debit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        auto *_t = static_cast<debit *>(_o);
+        (void)_t;
+        switch (_id) {
+        case 0: _t->on_pushButton_calculate_clicked(); break;
+        case 1: { double _r = _t->on_pushButton_del_clicked();
+            if (_a[0]) *reinterpret_cast< double*>(_a[0]) = std::move(_r); }  break;
+        case 2: _t->on_pushButton_add_clicked(); break;
+        case 3: { double _r = _t->on_pushButton_del_2_clicked();
+            if (_a[0]) *reinterpret_cast< double*>(_a[0]) = std::move(_r); }  break;
+        case 4: _t->on_pushButton_add_2_clicked(); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject debit::staticMetaObject = { {
@@ -68,7 +102,7 @@ const QMetaObject debit::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_debit_t
 , QtPrivate::TypeAndForceComplete<debit, std::true_type>
-
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -92,6 +126,17 @@ void *debit::qt_metacast(const char *_clname)
 int debit::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 5)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 5;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 5)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 5;
+    }
     return _id;
 }
 QT_WARNING_POP

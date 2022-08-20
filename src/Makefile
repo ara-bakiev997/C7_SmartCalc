@@ -23,7 +23,7 @@ test_:
 
 git:
 	git add Makefile s21_smartcalc.c s21_smartcalc.h smartcalc_test.txt frontend
-	git commit -m "frontend credit"
+	git commit -m "frontend full"
 	git push origin develop
 
 s21_smartcalc.a: clean $(OBJ)
