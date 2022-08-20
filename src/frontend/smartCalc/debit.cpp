@@ -11,6 +11,9 @@ debit::debit(QWidget *parent) :
     ui->lineEdit_period->setValidator(new QDoubleValidator(this));
     ui->lineEdit_rate->setValidator(new QDoubleValidator(this));
     ui->lineEdit_tax->setValidator(new QDoubleValidator(this));
+    ui->lineEdit_add->setValidator(new QDoubleValidator(this));
+    ui->lineEdit_del->setValidator(new QDoubleValidator(this));
+
 }
 
 debit::~debit()

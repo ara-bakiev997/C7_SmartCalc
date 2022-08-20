@@ -61,7 +61,7 @@ public:
     {
         if (credit->objectName().isEmpty())
             credit->setObjectName(QString::fromUtf8("credit"));
-        credit->resize(634, 637);
+        credit->resize(634, 486);
         verticalLayout_33 = new QVBoxLayout(credit);
         verticalLayout_33->setObjectName(QString::fromUtf8("verticalLayout_33"));
         verticalLayout_25 = new QVBoxLayout();
@@ -145,13 +145,15 @@ public:
         calculate = new QPushButton(credit);
         calculate->setObjectName(QString::fromUtf8("calculate"));
         calculate->setMinimumSize(QSize(150, 50));
-        calculate->setStyleSheet(QString::fromUtf8("background-color: rgb(97, 197, 83);"));
+        calculate->setStyleSheet(QString::fromUtf8("background-color: rgb(97, 197, 83);\n"
+"font: 18pt \".AppleSystemUIFont\";\n"
+"background-color: rgb(68, 125, 230);"));
         calculate->setCheckable(false);
         calculate->setChecked(false);
 
         verticalLayout_31->addWidget(calculate);
 
-        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_6 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_31->addItem(verticalSpacer_6);
 

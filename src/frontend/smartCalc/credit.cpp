@@ -7,6 +7,9 @@ credit::credit(QWidget *parent) :
     ui(new Ui::credit)
 {
     ui->setupUi(this);
+    ui->lineEdit_sum_credit->setValidator(new QDoubleValidator(this));
+    ui->lineEdit_limit->setValidator(new QDoubleValidator(this));
+    ui->lineEdit_percent->setValidator(new QDoubleValidator(this));
 }
 
 credit::~credit()

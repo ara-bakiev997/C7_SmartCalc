@@ -62,19 +62,6 @@ public:
     QVBoxLayout *verticalLayout_6;
     QLabel *label_6;
     QComboBox *comboBox_capital;
-    QSpacerItem *verticalSpacer_8;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_11;
-    QLineEdit *lineEdit_total_sum_dep;
-    QLabel *label_14;
-    QSpacerItem *verticalSpacer_6;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label;
-    QLineEdit *lineEdit_percents;
-    QLabel *label_12;
-    QSpacerItem *verticalSpacer_3;
-    QPushButton *pushButton_calculate;
-    QSpacerItem *verticalSpacer_7;
     QHBoxLayout *horizontalLayout_14;
     QVBoxLayout *verticalLayout_12;
     QVBoxLayout *verticalLayout_10;
@@ -102,15 +89,25 @@ public:
     QHBoxLayout *horizontalLayout_11;
     QPushButton *pushButton_del_2;
     QPushButton *pushButton_add_2;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label;
+    QLineEdit *lineEdit_percents;
+    QLabel *label_12;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_11;
+    QLineEdit *lineEdit_total_sum_dep;
+    QLabel *label_14;
+    QPushButton *pushButton_calculate;
+    QSpacerItem *verticalSpacer_3;
+    QSpacerItem *verticalSpacer_8;
     QSpacerItem *verticalSpacer_2;
-    QSpacerItem *verticalSpacer;
-    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *verticalSpacer_7;
 
     void setupUi(QDialog *debit)
     {
         if (debit->objectName().isEmpty())
             debit->setObjectName(QString::fromUtf8("debit"));
-        debit->resize(652, 729);
+        debit->resize(652, 668);
         verticalLayout_13 = new QVBoxLayout(debit);
         verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
         gridLayout_2 = new QGridLayout();
@@ -138,7 +135,7 @@ public:
         horizontalLayout_2->addWidget(label_13);
 
 
-        gridLayout_2->addLayout(horizontalLayout_2, 7, 4, 1, 3);
+        gridLayout_2->addLayout(horizontalLayout_2, 5, 4, 1, 3);
 
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -299,77 +296,6 @@ public:
 
         gridLayout_2->addLayout(gridLayout, 0, 0, 2, 7);
 
-        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(verticalSpacer_8, 8, 4, 1, 1);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_11 = new QLabel(debit);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setFont(font);
-
-        horizontalLayout_3->addWidget(label_11);
-
-        lineEdit_total_sum_dep = new QLineEdit(debit);
-        lineEdit_total_sum_dep->setObjectName(QString::fromUtf8("lineEdit_total_sum_dep"));
-        lineEdit_total_sum_dep->setReadOnly(true);
-
-        horizontalLayout_3->addWidget(lineEdit_total_sum_dep);
-
-        label_14 = new QLabel(debit);
-        label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setFont(font);
-
-        horizontalLayout_3->addWidget(label_14);
-
-
-        gridLayout_2->addLayout(horizontalLayout_3, 9, 0, 1, 7);
-
-        verticalSpacer_6 = new QSpacerItem(20, 48, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(verticalSpacer_6, 4, 5, 1, 2);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(debit);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setFont(font);
-
-        horizontalLayout->addWidget(label);
-
-        lineEdit_percents = new QLineEdit(debit);
-        lineEdit_percents->setObjectName(QString::fromUtf8("lineEdit_percents"));
-        lineEdit_percents->setReadOnly(true);
-
-        horizontalLayout->addWidget(lineEdit_percents);
-
-        label_12 = new QLabel(debit);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setFont(font);
-
-        horizontalLayout->addWidget(label_12);
-
-
-        gridLayout_2->addLayout(horizontalLayout, 7, 0, 1, 4);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(verticalSpacer_3, 8, 2, 1, 2);
-
-        pushButton_calculate = new QPushButton(debit);
-        pushButton_calculate->setObjectName(QString::fromUtf8("pushButton_calculate"));
-        QFont font1;
-        font1.setPointSize(20);
-        pushButton_calculate->setFont(font1);
-        pushButton_calculate->setStyleSheet(QString::fromUtf8("background-color: rgb(97, 197, 84);"));
-
-        gridLayout_2->addWidget(pushButton_calculate, 5, 0, 1, 7);
-
-        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(verticalSpacer_7, 6, 5, 1, 2);
-
         horizontalLayout_14 = new QHBoxLayout();
         horizontalLayout_14->setObjectName(QString::fromUtf8("horizontalLayout_14"));
         verticalLayout_12 = new QVBoxLayout();
@@ -423,11 +349,13 @@ public:
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         pushButton_del = new QPushButton(debit);
         pushButton_del->setObjectName(QString::fromUtf8("pushButton_del"));
+        pushButton_del->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_10->addWidget(pushButton_del);
 
         pushButton_add = new QPushButton(debit);
         pushButton_add->setObjectName(QString::fromUtf8("pushButton_add"));
+        pushButton_add->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_10->addWidget(pushButton_add);
 
@@ -491,11 +419,13 @@ public:
         horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
         pushButton_del_2 = new QPushButton(debit);
         pushButton_del_2->setObjectName(QString::fromUtf8("pushButton_del_2"));
+        pushButton_del_2->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_11->addWidget(pushButton_del_2);
 
         pushButton_add_2 = new QPushButton(debit);
         pushButton_add_2->setObjectName(QString::fromUtf8("pushButton_add_2"));
+        pushButton_add_2->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_11->addWidget(pushButton_add_2);
 
@@ -509,19 +439,78 @@ public:
         horizontalLayout_14->addLayout(verticalLayout_11);
 
 
-        gridLayout_2->addLayout(horizontalLayout_14, 3, 0, 1, 7);
+        gridLayout_2->addLayout(horizontalLayout_14, 2, 0, 1, 7);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(debit);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
+
+        horizontalLayout->addWidget(label);
+
+        lineEdit_percents = new QLineEdit(debit);
+        lineEdit_percents->setObjectName(QString::fromUtf8("lineEdit_percents"));
+        lineEdit_percents->setReadOnly(true);
+
+        horizontalLayout->addWidget(lineEdit_percents);
+
+        label_12 = new QLabel(debit);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setFont(font);
+
+        horizontalLayout->addWidget(label_12);
+
+
+        gridLayout_2->addLayout(horizontalLayout, 5, 0, 1, 4);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        label_11 = new QLabel(debit);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setFont(font);
+
+        horizontalLayout_3->addWidget(label_11);
+
+        lineEdit_total_sum_dep = new QLineEdit(debit);
+        lineEdit_total_sum_dep->setObjectName(QString::fromUtf8("lineEdit_total_sum_dep"));
+        lineEdit_total_sum_dep->setReadOnly(true);
+
+        horizontalLayout_3->addWidget(lineEdit_total_sum_dep);
+
+        label_14 = new QLabel(debit);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setFont(font);
+
+        horizontalLayout_3->addWidget(label_14);
+
+
+        gridLayout_2->addLayout(horizontalLayout_3, 7, 0, 1, 7);
+
+        pushButton_calculate = new QPushButton(debit);
+        pushButton_calculate->setObjectName(QString::fromUtf8("pushButton_calculate"));
+        QFont font1;
+        font1.setPointSize(20);
+        pushButton_calculate->setFont(font1);
+        pushButton_calculate->setStyleSheet(QString::fromUtf8("background-color: rgb(74, 129, 231);"));
+
+        gridLayout_2->addWidget(pushButton_calculate, 3, 0, 1, 7);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(verticalSpacer_3, 6, 2, 1, 2);
+
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(verticalSpacer_8, 6, 4, 1, 1);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
 
-        gridLayout_2->addItem(verticalSpacer_2, 6, 1, 1, 2);
+        gridLayout_2->addItem(verticalSpacer_2, 4, 1, 1, 2);
 
-        verticalSpacer = new QSpacerItem(20, 48, QSizePolicy::Minimum, QSizePolicy::Minimum);
+        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
 
-        gridLayout_2->addItem(verticalSpacer, 4, 3, 1, 1);
-
-        verticalSpacer_4 = new QSpacerItem(20, 58, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(verticalSpacer_4, 2, 0, 1, 1);
+        gridLayout_2->addItem(verticalSpacer_7, 4, 5, 1, 2);
 
 
         verticalLayout_13->addLayout(gridLayout_2);
@@ -553,11 +542,6 @@ public:
         comboBox_capital->setItemText(0, QCoreApplication::translate("debit", "\320\235\320\265\321\202", nullptr));
         comboBox_capital->setItemText(1, QCoreApplication::translate("debit", "\320\225\320\266\320\265\320\274\320\265\321\201\321\217\321\207\320\275\320\276", nullptr));
 
-        label_11->setText(QCoreApplication::translate("debit", "\320\241\321\203\320\274\320\274\320\260 \320\262\320\272\320\273\320\260\320\264\320\260 \320\272 \320\272\320\276\320\275\321\206\321\203 \321\201\321\200\320\276\320\272\320\260", nullptr));
-        label_14->setText(QCoreApplication::translate("debit", "\321\200\321\203\320\261.", nullptr));
-        label->setText(QCoreApplication::translate("debit", "\320\235\320\260\321\207\320\270\321\201\320\273\320\265\320\275\320\275\321\213\320\265 \320\277\321\200\320\276\321\206\320\265\320\275\321\202\321\213:", nullptr));
-        label_12->setText(QCoreApplication::translate("debit", "\321\200\321\203\320\261.", nullptr));
-        pushButton_calculate->setText(QCoreApplication::translate("debit", "\320\240\320\260\321\201\321\207\320\270\321\202\320\260\321\202\321\214", nullptr));
         label_8->setText(QCoreApplication::translate("debit", "\320\237\320\276\320\277\320\276\320\273\320\275\320\265\320\275\320\270\321\217:", nullptr));
         label_16->setText(QCoreApplication::translate("debit", "\321\200\321\203\320\261.", nullptr));
         label_22->setText(QCoreApplication::translate("debit", " \320\236\320\261\321\211\320\260\321\217 \321\201\321\203\320\274\320\274\320\260 \320\277\320\276\320\277\320\276\320\273\320\275\320\265\320\275\320\270\321\217:", nullptr));
@@ -568,6 +552,11 @@ public:
         label_23->setText(QCoreApplication::translate("debit", " \320\236\320\261\321\211\320\260\321\217 \321\201\321\203\320\274\320\274\320\260 \321\201\320\275\321\217\321\202\320\270\321\217:", nullptr));
         pushButton_del_2->setText(QCoreApplication::translate("debit", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
         pushButton_add_2->setText(QCoreApplication::translate("debit", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
+        label->setText(QCoreApplication::translate("debit", "\320\235\320\260\321\207\320\270\321\201\320\273\320\265\320\275\320\275\321\213\320\265 \320\277\321\200\320\276\321\206\320\265\320\275\321\202\321\213:", nullptr));
+        label_12->setText(QCoreApplication::translate("debit", "\321\200\321\203\320\261.", nullptr));
+        label_11->setText(QCoreApplication::translate("debit", "\320\241\321\203\320\274\320\274\320\260 \320\262\320\272\320\273\320\260\320\264\320\260 \320\272 \320\272\320\276\320\275\321\206\321\203 \321\201\321\200\320\276\320\272\320\260", nullptr));
+        label_14->setText(QCoreApplication::translate("debit", "\321\200\321\203\320\261.", nullptr));
+        pushButton_calculate->setText(QCoreApplication::translate("debit", "\320\240\320\260\321\201\321\201\321\207\320\270\321\202\320\260\321\202\321\214", nullptr));
     } // retranslateUi
 
 };
