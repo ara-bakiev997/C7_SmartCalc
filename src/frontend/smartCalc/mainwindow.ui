@@ -555,8 +555,14 @@ QPushButton:pressed {
 
 background-color : white;</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
        <property name="readOnly">
         <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string>0</string>
        </property>
       </widget>
      </item>
@@ -570,6 +576,12 @@ background-color : white;</string>
 }
 
 background-color : white;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>0</string>
        </property>
       </widget>
      </item>

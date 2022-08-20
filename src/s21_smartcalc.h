@@ -78,6 +78,6 @@ double popEqueue(Node** rear, Node** front);
 void enqueueOp(Node** rear, Node** front, char** str, int* numIn);
 
 /*___________________PRINT_FUNCTIONS__________________*/
-void printStek(Node* src);
+// void printStek(Node* src);
 
 #endif  // SRC_S21_SMARTCALC_H_

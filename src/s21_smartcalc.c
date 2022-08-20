@@ -350,13 +350,13 @@ void enqueueOp(Node** rear, Node** front, char** str, int* numIn) {
 
 /*___________________PRINT_FUNCTIONS__________________*/
 
-void printStek(Node* src) {
-  for (Node* p = src; p != NULL; p = p->next) {
-    printf("Value = %lf\n", p->value);
-    printf("Adress list= %p\n", p);
-    printf("Next = %p\n", p->next);
-  }
-}
+// void printStek(Node* src) {
+//   for (Node* p = src; p != NULL; p = p->next) {
+//     printf("Value = %lf\n", p->value);
+//     printf("Adress list= %p\n", p);
+//     printf("Next = %p\n", p->next);
+//   }
+// }
 
 /*
 finite Аргументы:

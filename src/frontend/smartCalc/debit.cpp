@@ -13,7 +13,6 @@ debit::debit(QWidget *parent) :
     ui->lineEdit_tax->setValidator(new QDoubleValidator(this));
     ui->lineEdit_add->setValidator(new QDoubleValidator(this));
     ui->lineEdit_del->setValidator(new QDoubleValidator(this));
-
 }
 
 debit::~debit()
@@ -31,20 +30,14 @@ void debit::on_pushButton_calculate_clicked()
     rate = ui->lineEdit_rate->text().toDouble();
     tax = ui->lineEdit_tax->text().toDouble() * 1000000 / 100;
 
-//    count = QString::QListWidgetItem((*tmp));
-//    qDebug()<<(count);
-
     while (ui->listWidget_add->count() != 0) {
         add_all += on_pushButton_del_clicked();
-        qDebug()<<sum;
     }
     sum += add_all;
     while (ui->listWidget_sub->count() != 0) {
         sub_all += on_pushButton_del_2_clicked();
-        qDebug()<<sum;
     }
     sum -= sub_all;
-
     total_string = QString::number(add_all);
     ui->lineEdit_add_all->setText(total_string);
     total_string = QString::number(sub_all);
@@ -53,9 +46,7 @@ void debit::on_pushButton_calculate_clicked()
     ui->lineEdit_del->setText("0");
     if (ui->comboBox_capital->currentText() == "Ежемесячно") {
         ui->comboBox_peiod_of_pay->setCurrentIndex(0);
-//        percents = (sum * pow((1 + rate * months * AVERAGE_DAYS_IN_MONTH / 365 / 1000), months-1)) - sum;
         percents = (sum * pow((1 + (rate/100) /12), months)) - sum;
-//                qDebug()<<(percents);
     } else {
         percents = (sum * rate * months * AVERAGE_DAYS_IN_MONTH / 365) / 100;
     }
@@ -89,7 +80,6 @@ double debit::on_pushButton_del_clicked()
      QString line = "";
      if (ui->listWidget_add->count() != 0) {
          line = ui->listWidget_add->takeItem(ui->listWidget_add->count() - 1)->text();
-//         qDebug()<<(line);
      }
      return line.toDouble();
 }
@@ -108,7 +98,6 @@ double debit::on_pushButton_del_2_clicked()
     QString line = "";
     if (ui->listWidget_sub->count() != 0) {
         line = ui->listWidget_sub->takeItem(ui->listWidget_sub->count() - 1)->text();
-//        qDebug()<<(line);
     }
     return line.toDouble();
 }

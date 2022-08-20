@@ -486,6 +486,7 @@ public:
 "}\n"
 "\n"
 "background-color : white;"));
+        string->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         string->setReadOnly(false);
 
         gridLayout->addWidget(string, 0, 0, 1, 5);
@@ -499,6 +500,7 @@ public:
 "}\n"
 "\n"
 "background-color : white;"));
+        result->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout->addWidget(result, 1, 0, 1, 5);
 
@@ -611,6 +613,8 @@ public:
         pushButton_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         pushButton_equal->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
         pushButton_delete->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
+        string->setPlaceholderText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        result->setPlaceholderText(QCoreApplication::translate("MainWindow", "0", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Plot graph", nullptr));
         Xmin->setText(QCoreApplication::translate("MainWindow", "Xmin", nullptr));
         Xmax->setText(QCoreApplication::translate("MainWindow", "Xmax", nullptr));
