@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>737</width>
+    <width>780</width>
     <height>351</height>
    </rect>
   </property>
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>30</y>
-      <width>281</width>
-      <height>231</height>
+      <y>20</y>
+      <width>311</width>
+      <height>271</height>
      </rect>
     </property>
    </widget>
@@ -30,7 +30,7 @@
       <x>12</x>
       <y>24</y>
       <width>428</width>
-      <height>233</height>
+      <height>269</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -38,6 +38,7 @@
       <widget class="QPushButton" name="pushButton_AC">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -57,6 +58,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_sqrt">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -74,6 +76,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_mod">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -91,6 +94,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_x">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -108,6 +112,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_openBracket">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -125,6 +130,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_closeBracket">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -142,6 +148,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_div">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -161,6 +168,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_ln">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -178,6 +186,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_log">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -194,7 +203,7 @@ QPushButton:pressed {
      <item row="3" column="2">
       <widget class="QPushButton" name="pushButton_7">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>7</string>
@@ -204,7 +213,7 @@ QPushButton:pressed {
      <item row="3" column="3">
       <widget class="QPushButton" name="pushButton_8">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>8</string>
@@ -214,7 +223,7 @@ QPushButton:pressed {
      <item row="3" column="4">
       <widget class="QPushButton" name="pushButton_9">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>9</string>
@@ -225,6 +234,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_mul">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -244,6 +254,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_atan">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -261,6 +272,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_tan">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -277,7 +289,7 @@ QPushButton:pressed {
      <item row="4" column="2">
       <widget class="QPushButton" name="pushButton_4">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>4</string>
@@ -287,7 +299,7 @@ QPushButton:pressed {
      <item row="4" column="3">
       <widget class="QPushButton" name="pushButton_5">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>5</string>
@@ -297,7 +309,7 @@ QPushButton:pressed {
      <item row="4" column="4">
       <widget class="QPushButton" name="pushButton_6">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>6</string>
@@ -308,6 +320,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_sub">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -327,6 +340,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_acos">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -344,6 +358,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_cos">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -360,7 +375,7 @@ QPushButton:pressed {
      <item row="5" column="2">
       <widget class="QPushButton" name="pushButton_1">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>1</string>
@@ -370,7 +385,7 @@ QPushButton:pressed {
      <item row="5" column="3">
       <widget class="QPushButton" name="pushButton_2">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>2</string>
@@ -380,7 +395,7 @@ QPushButton:pressed {
      <item row="5" column="4">
       <widget class="QPushButton" name="pushButton_3">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>3</string>
@@ -391,6 +406,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_sum">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -410,6 +426,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_asin">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -427,6 +444,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_sin">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -444,6 +462,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_pow">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -460,7 +479,7 @@ QPushButton:pressed {
      <item row="6" column="3">
       <widget class="QPushButton" name="pushButton_0">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">font: 18pt &quot;.AppleSystemUIFont&quot;;</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -471,6 +490,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_dot">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(215, 215, 215);
   border: 1px solid gray;
 }
@@ -488,6 +508,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_equal">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -507,6 +528,7 @@ QPushButton:pressed {
       <widget class="QPushButton" name="pushButton_delete">
        <property name="styleSheet">
         <string notr="true">QPushButton {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   background-color: rgb(255, 151, 57);
   color: white; 
   border: 1px solid gray;
@@ -526,6 +548,7 @@ QPushButton:pressed {
       <widget class="QLineEdit" name="string">
        <property name="styleSheet">
         <string notr="true">QLabel {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   qproperty-alignment: 'AlignVCenter | AlignRight';
   border: 1px solid gray;
 }
@@ -541,6 +564,7 @@ background-color : white;</string>
       <widget class="QLineEdit" name="result">
        <property name="styleSheet">
         <string notr="true">QLabel {
+	font: 18pt &quot;.AppleSystemUIFont&quot;;
   qproperty-alignment: 'AlignVCenter | AlignRight';
   border: 1px solid gray;
 }
@@ -555,9 +579,9 @@ background-color : white;</string>
     <property name="geometry">
      <rect>
       <x>412</x>
-      <y>270</y>
-      <width>321</width>
-      <height>31</height>
+      <y>300</y>
+      <width>351</width>
+      <height>37</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -584,6 +608,9 @@ background-color : white;</string>
          </item>
          <item>
           <widget class="QDoubleSpinBox" name="doubleSpinBox_Xmin">
+           <property name="styleSheet">
+            <string notr="true">font: 13pt &quot;.AppleSystemUIFont&quot;;</string>
+           </property>
            <property name="minimum">
             <double>-999.000000000000000</double>
            </property>
@@ -602,6 +629,9 @@ background-color : white;</string>
          </item>
          <item>
           <widget class="QDoubleSpinBox" name="doubleSpinBox_Xmax">
+           <property name="styleSheet">
+            <string notr="true">font: 13pt &quot;.AppleSystemUIFont&quot;;</string>
+           </property>
            <property name="minimum">
             <double>-999.000000000000000</double>
            </property>
@@ -617,7 +647,7 @@ background-color : white;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>270</y>
+      <y>300</y>
       <width>386</width>
       <height>32</height>
      </rect>

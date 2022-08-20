@@ -70,23 +70,21 @@ void MainWindow::functions() {
 }
 
 void MainWindow::calculate() {
-    QPushButton *button = (QPushButton *)sender();
     QString value;
     value = ui->string->text();
-    if (button->text() == '=') {
-        double result;
-        QByteArray str_bit = value.toLocal8Bit();
-        char *res_str = str_bit.data();
-        int check = start(res_str, &result);
-        if (!check) {
-            ui->result->setText("ERROR");
-            ui->string->setText("");
-        } else {
-            value = QString::number(result, 'g', 20);
-            ui->result->setText(value);
-            ui->string->setText("");
-        }
+    double result;
+    QByteArray str_bit = value.toLocal8Bit();
+    char *res_str = str_bit.data();
+    int check = start(res_str, &result);
+    if (!check) {
+      ui->result->setText("ERROR");
+      ui->string->setText("");
+    } else {
+      value = QString::number(result, 'g', 20);
+      ui->result->setText(value);
+      ui->string->setText("");
     }
+
 }
 
 void MainWindow::AC() {
@@ -128,21 +126,21 @@ void MainWindow::on_pushButton_clicked()
            for(X = xBegin; X <= xEnd; X+= h) {
                if (fabs(X) < EPS) X = 0;
                x.push_back(X);
-               qDebug()<<X;
                origin_string = new_label;
-
                value = origin_string.replace("x",('(' + QString::number(X) + ')'));
                QByteArray str_bit = value.toLocal8Bit();
-               qDebug()<<value;
                char *res_str = str_bit.data();
-               start(res_str, &Y);
-
-               y.push_back(Y);
+               int check = start(res_str, &Y);
+               if (!check) {
+                 ui->result->setText("ERROR");
+                 ui->string->setText("");
+               } else {
+                 y.push_back(Y);
+               }
            }
            ui->widget->addGraph();
            ui->widget->graph(0)->addData(x,y);
            ui->widget->replot();
-           ui->widget->update();
            x.clear();
            y.clear();
 }

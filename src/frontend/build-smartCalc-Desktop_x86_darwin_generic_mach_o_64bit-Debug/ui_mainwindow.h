@@ -83,21 +83,22 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(737, 351);
+        MainWindow->resize(780, 351);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new QCustomPlot(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(450, 30, 281, 231));
+        widget->setGeometry(QRect(450, 20, 311, 271));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(12, 24, 428, 233));
+        layoutWidget->setGeometry(QRect(12, 24, 428, 269));
         gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
         pushButton_AC = new QPushButton(layoutWidget);
         pushButton_AC->setObjectName(QString::fromUtf8("pushButton_AC"));
         pushButton_AC->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -113,6 +114,7 @@ public:
         pushButton_sqrt = new QPushButton(layoutWidget);
         pushButton_sqrt->setObjectName(QString::fromUtf8("pushButton_sqrt"));
         pushButton_sqrt->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -126,6 +128,7 @@ public:
         pushButton_mod = new QPushButton(layoutWidget);
         pushButton_mod->setObjectName(QString::fromUtf8("pushButton_mod"));
         pushButton_mod->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -139,6 +142,7 @@ public:
         pushButton_x = new QPushButton(layoutWidget);
         pushButton_x->setObjectName(QString::fromUtf8("pushButton_x"));
         pushButton_x->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -152,6 +156,7 @@ public:
         pushButton_openBracket = new QPushButton(layoutWidget);
         pushButton_openBracket->setObjectName(QString::fromUtf8("pushButton_openBracket"));
         pushButton_openBracket->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -165,6 +170,7 @@ public:
         pushButton_closeBracket = new QPushButton(layoutWidget);
         pushButton_closeBracket->setObjectName(QString::fromUtf8("pushButton_closeBracket"));
         pushButton_closeBracket->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -178,6 +184,7 @@ public:
         pushButton_div = new QPushButton(layoutWidget);
         pushButton_div->setObjectName(QString::fromUtf8("pushButton_div"));
         pushButton_div->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -193,6 +200,7 @@ public:
         pushButton_ln = new QPushButton(layoutWidget);
         pushButton_ln->setObjectName(QString::fromUtf8("pushButton_ln"));
         pushButton_ln->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -206,6 +214,7 @@ public:
         pushButton_log = new QPushButton(layoutWidget);
         pushButton_log->setObjectName(QString::fromUtf8("pushButton_log"));
         pushButton_log->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -218,25 +227,26 @@ public:
 
         pushButton_7 = new QPushButton(layoutWidget);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-        pushButton_7->setStyleSheet(QString::fromUtf8(""));
+        pushButton_7->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_7, 3, 2, 1, 1);
 
         pushButton_8 = new QPushButton(layoutWidget);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-        pushButton_8->setStyleSheet(QString::fromUtf8(""));
+        pushButton_8->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_8, 3, 3, 1, 1);
 
         pushButton_9 = new QPushButton(layoutWidget);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-        pushButton_9->setStyleSheet(QString::fromUtf8(""));
+        pushButton_9->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_9, 3, 4, 1, 1);
 
         pushButton_mul = new QPushButton(layoutWidget);
         pushButton_mul->setObjectName(QString::fromUtf8("pushButton_mul"));
         pushButton_mul->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -252,6 +262,7 @@ public:
         pushButton_atan = new QPushButton(layoutWidget);
         pushButton_atan->setObjectName(QString::fromUtf8("pushButton_atan"));
         pushButton_atan->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -265,6 +276,7 @@ public:
         pushButton_tan = new QPushButton(layoutWidget);
         pushButton_tan->setObjectName(QString::fromUtf8("pushButton_tan"));
         pushButton_tan->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -277,25 +289,26 @@ public:
 
         pushButton_4 = new QPushButton(layoutWidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setStyleSheet(QString::fromUtf8(""));
+        pushButton_4->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_4, 4, 2, 1, 1);
 
         pushButton_5 = new QPushButton(layoutWidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setStyleSheet(QString::fromUtf8(""));
+        pushButton_5->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_5, 4, 3, 1, 1);
 
         pushButton_6 = new QPushButton(layoutWidget);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setStyleSheet(QString::fromUtf8(""));
+        pushButton_6->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_6, 4, 4, 1, 1);
 
         pushButton_sub = new QPushButton(layoutWidget);
         pushButton_sub->setObjectName(QString::fromUtf8("pushButton_sub"));
         pushButton_sub->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -311,6 +324,7 @@ public:
         pushButton_acos = new QPushButton(layoutWidget);
         pushButton_acos->setObjectName(QString::fromUtf8("pushButton_acos"));
         pushButton_acos->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -324,6 +338,7 @@ public:
         pushButton_cos = new QPushButton(layoutWidget);
         pushButton_cos->setObjectName(QString::fromUtf8("pushButton_cos"));
         pushButton_cos->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -336,25 +351,26 @@ public:
 
         pushButton_1 = new QPushButton(layoutWidget);
         pushButton_1->setObjectName(QString::fromUtf8("pushButton_1"));
-        pushButton_1->setStyleSheet(QString::fromUtf8(""));
+        pushButton_1->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_1, 5, 2, 1, 1);
 
         pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setStyleSheet(QString::fromUtf8(""));
+        pushButton_2->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_2, 5, 3, 1, 1);
 
         pushButton_3 = new QPushButton(layoutWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setStyleSheet(QString::fromUtf8(""));
+        pushButton_3->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_3, 5, 4, 1, 1);
 
         pushButton_sum = new QPushButton(layoutWidget);
         pushButton_sum->setObjectName(QString::fromUtf8("pushButton_sum"));
         pushButton_sum->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -370,6 +386,7 @@ public:
         pushButton_asin = new QPushButton(layoutWidget);
         pushButton_asin->setObjectName(QString::fromUtf8("pushButton_asin"));
         pushButton_asin->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -383,6 +400,7 @@ public:
         pushButton_sin = new QPushButton(layoutWidget);
         pushButton_sin->setObjectName(QString::fromUtf8("pushButton_sin"));
         pushButton_sin->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -396,6 +414,7 @@ public:
         pushButton_pow = new QPushButton(layoutWidget);
         pushButton_pow->setObjectName(QString::fromUtf8("pushButton_pow"));
         pushButton_pow->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -408,13 +427,14 @@ public:
 
         pushButton_0 = new QPushButton(layoutWidget);
         pushButton_0->setObjectName(QString::fromUtf8("pushButton_0"));
-        pushButton_0->setStyleSheet(QString::fromUtf8(""));
+        pushButton_0->setStyleSheet(QString::fromUtf8("font: 18pt \".AppleSystemUIFont\";"));
 
         gridLayout->addWidget(pushButton_0, 6, 3, 1, 1);
 
         pushButton_dot = new QPushButton(layoutWidget);
         pushButton_dot->setObjectName(QString::fromUtf8("pushButton_dot"));
         pushButton_dot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -428,6 +448,7 @@ public:
         pushButton_equal = new QPushButton(layoutWidget);
         pushButton_equal->setObjectName(QString::fromUtf8("pushButton_equal"));
         pushButton_equal->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -443,6 +464,7 @@ public:
         pushButton_delete = new QPushButton(layoutWidget);
         pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
         pushButton_delete->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
 "  border: 1px solid gray;\n"
@@ -458,6 +480,7 @@ public:
         string = new QLineEdit(layoutWidget);
         string->setObjectName(QString::fromUtf8("string"));
         string->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  qproperty-alignment: 'AlignVCenter | AlignRight';\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -470,6 +493,7 @@ public:
         result = new QLineEdit(layoutWidget);
         result->setObjectName(QString::fromUtf8("result"));
         result->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 18pt \".AppleSystemUIFont\";\n"
 "  qproperty-alignment: 'AlignVCenter | AlignRight';\n"
 "  border: 1px solid gray;\n"
 "}\n"
@@ -480,7 +504,7 @@ public:
 
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(412, 270, 321, 31));
+        layoutWidget1->setGeometry(QRect(412, 300, 351, 37));
         horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -501,6 +525,7 @@ public:
 
         doubleSpinBox_Xmin = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox_Xmin->setObjectName(QString::fromUtf8("doubleSpinBox_Xmin"));
+        doubleSpinBox_Xmin->setStyleSheet(QString::fromUtf8("font: 13pt \".AppleSystemUIFont\";"));
         doubleSpinBox_Xmin->setMinimum(-999.000000000000000);
 
         horizontalLayout_2->addWidget(doubleSpinBox_Xmin);
@@ -517,6 +542,7 @@ public:
 
         doubleSpinBox_Xmax = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
+        doubleSpinBox_Xmax->setStyleSheet(QString::fromUtf8("font: 13pt \".AppleSystemUIFont\";"));
         doubleSpinBox_Xmax->setMinimum(-999.000000000000000);
 
         horizontalLayout->addWidget(doubleSpinBox_Xmax);
@@ -529,7 +555,7 @@ public:
 
         layoutWidget2 = new QWidget(centralwidget);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(10, 270, 386, 32));
+        layoutWidget2->setGeometry(QRect(10, 300, 386, 32));
         horizontalLayout_5 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);

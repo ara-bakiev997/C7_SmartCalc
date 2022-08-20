@@ -6,6 +6,9 @@
 #include <qvector.h>
 #include <string.h>
 
+#define AVERAGE_DAYS_IN_MONTH 30.416666666666667851
+#define NDFL 13/100
+
 extern "C" {
    #include "../../s21_smartcalc.h"
 }
@@ -36,11 +39,9 @@ private slots:
         void calculate();
         void AC();
         void del();
-
         void on_pushButton_clicked();
         double doubleSpinBox_Xmax();
         double doubleSpinBox_Xmin();
-
         void on_pushButton_Deposit_clicked();
         void on_pushButton_Credit_clicked();
 };
