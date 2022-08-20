@@ -45,7 +45,8 @@ AR            = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 RANLIB        = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -s
 SED           = sed
 STRIP         = strip
-############################
+
+#####################
 GCC = gcc -Wall -Wextra  -g #-Werror
 SOURCE = s21_*.c
 OBJ = $(SOURCE:.c=.o)
@@ -53,7 +54,6 @@ GCOVFLAGS=-L. --coverage
 HTML=lcov -t "test" -o rep.info -c -d .
 OS = $(shell uname)
 CHECK_H=`pkg-config --static --libs check`
-
 ####### Output directory
 
 OBJECTS_DIR   = ./
@@ -995,12 +995,16 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_credit.h ui_debit.h ui_mainwindow.h
+compiler_uic_make_all: ui_credit.h ui_debit.h ui_debit.h ui_mainwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_credit.h ui_debit.h ui_mainwindow.h
+	-$(DEL_FILE) ui_credit.h ui_debit.h ui_debit.h ui_mainwindow.h
 ui_credit.h: frontend/smartCalc/credit.ui \
 		/usr/local/share/qt/libexec/uic
 	/usr/local/share/qt/libexec/uic frontend/smartCalc/credit.ui -o ui_credit.h
+
+ui_debit.h: frontend/smartCalc/debit.ui \
+		/usr/local/share/qt/libexec/uic
+	/usr/local/share/qt/libexec/uic frontend/smartCalc/debit.ui -o ui_debit.h
 
 ui_debit.h: frontend/smartCalc/debit.ui \
 		/usr/local/share/qt/libexec/uic
@@ -1128,7 +1132,7 @@ uninstall: uninstall_target  FORCE
 FORCE:
 
 clean_back:
-	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM smartcalc_test.c smartCalc.app 
+	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c
 
 
 dvi: 
@@ -1136,12 +1140,12 @@ dvi:
 
 git:
 	git add .
-	git commit -m "FINALE"
+	git commit -m "qt debit_realise + html++"
 	git push origin develop
 
 tests: 
-	 checkmk clean_mode=1 smartcalc_test.txt > smartcalc_test.c
-	$(GCC) smartcalc_test.c $(SOURCE) -o test $(CHECK_H) $(GCOVFLAGS)
+	 checkmk clean_mode=1 test_calc.txt > test_calc.c
+	$(GCC) test_calc.c $(SOURCE) -o test $(CHECK_H) $(GCOVFLAGS)
 	./test
 
 # s21_smart_calc.a: clean $(OBJ)
@@ -1152,7 +1156,7 @@ gcov_report: tests
 	genhtml -o report rep.info
 	open report/index.html
 
-check_back:
+check:
 	cppcheck --enable=all --suppress=missingIncludeSystem --inconclusive --check-config $(SOURCE) *.h
 	cp ../materials/linters/CPPLINT.cfg CPPLINT.cfg
 	-python3 ../materials/linters/cpplint.py --extensions=c $(SOURCE) *.h
