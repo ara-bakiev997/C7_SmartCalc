@@ -46,14 +46,6 @@ RANLIB        = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 SED           = sed
 STRIP         = strip
 
-#####################
-GCC = gcc -Wall -Wextra  -g #-Werror
-SOURCE = s21_*.c
-OBJ = $(SOURCE:.c=.o)
-GCOVFLAGS=-L. --coverage
-HTML=lcov -t "test" -o rep.info -c -d .
-OS = $(shell uname)
-CHECK_H=`pkg-config --static --libs check`
 ####### Output directory
 
 OBJECTS_DIR   = ./
@@ -626,7 +618,7 @@ Makefile: frontend/smartCalc/smartCalc.pro /usr/local/share/qt/mkspecs/macx-clan
 		/usr/local/lib/QtWidgets.framework/Resources/QtWidgets.prl \
 		/usr/local/lib/QtGui.framework/Resources/QtGui.prl \
 		/usr/local/lib/QtCore.framework/Resources/QtCore.prl
-	$(QMAKE) -o Makefile frontend/smartCalc/smartCalc.pro
+	# $(QMAKE) -o Makefile frontend/smartCalc/smartCalc.pro
 /usr/local/share/qt/mkspecs/features/spec_pre.prf:
 /usr/local/share/qt/mkspecs/features/device_config.prf:
 /usr/local/share/qt/mkspecs/common/unix.conf:
@@ -908,6 +900,7 @@ all: Makefile \
 		smartCalc.app/Contents/PkgInfo \
 		smartCalc.app/Contents/Resources/empty.lproj \
 		smartCalc.app/Contents/Info.plist smartCalc.app/Contents/MacOS/smartCalc
+		open smartCalc.app
 
 dist: distdir FORCE
 	(cd `dirname $(DISTDIR)` && $(TAR) $(DISTNAME).tar $(DISTNAME) && $(COMPRESS) $(DISTNAME).tar) && $(MOVE) `dirname $(DISTDIR)`/$(DISTNAME).tar.gz . && $(DEL_FILE) -r $(DISTDIR)
@@ -1119,6 +1112,7 @@ uninstall_target: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/opt/smartCalc/bin/smartCalc.app
 
 
+
 install: clean all clean
 	open smartCalc.app
 	
@@ -1128,7 +1122,7 @@ uninstall: uninstall_target  FORCE
 FORCE:
 
 clean_back:
-	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c smartCalc.app
+	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c
 
 
 dvi: 
@@ -1136,7 +1130,7 @@ dvi:
 
 git:
 	git add .
-	git commit -m "qt debit_realise + html++"
+	git commit -m "ALL"
 	git push origin develop
 
 tests: 
@@ -1152,7 +1146,7 @@ gcov_report: tests
 	genhtml -o report rep.info
 	open report/index.html
 
-check_back:
+check:
 	cppcheck --enable=all --suppress=missingIncludeSystem --inconclusive --check-config $(SOURCE) *.h
 	cp ../materials/linters/CPPLINT.cfg CPPLINT.cfg
 	-python3 ../materials/linters/cpplint.py --extensions=c $(SOURCE) *.h
@@ -1163,5 +1157,4 @@ ifeq ($(OS), Darwin)
 else
 	CK_FORK=no valgrind --vgdb=no --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=RESULT_VALGRIND.txt ./test
 endif
-
 
