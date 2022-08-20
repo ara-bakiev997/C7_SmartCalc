@@ -559,7 +559,7 @@ background-color : white;</string>
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
        <property name="readOnly">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="placeholderText">
         <string>0</string>
@@ -580,6 +580,9 @@ background-color : white;</string>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
        <property name="placeholderText">
         <string>0</string>
        </property>
@@ -592,7 +595,7 @@ background-color : white;</string>
      <rect>
       <x>412</x>
       <y>300</y>
-      <width>351</width>
+      <width>363</width>
       <height>37</height>
      </rect>
     </property>
@@ -624,7 +627,13 @@ background-color : white;</string>
             <string notr="true">font: 13pt &quot;.AppleSystemUIFont&quot;;</string>
            </property>
            <property name="minimum">
-            <double>-999.000000000000000</double>
+            <double>-1000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>-10.000000000000000</double>
            </property>
           </widget>
          </item>
@@ -645,7 +654,13 @@ background-color : white;</string>
             <string notr="true">font: 13pt &quot;.AppleSystemUIFont&quot;;</string>
            </property>
            <property name="minimum">
-            <double>-999.000000000000000</double>
+            <double>-1000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
            </property>
           </widget>
          </item>

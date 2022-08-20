@@ -263,7 +263,7 @@ void pushStack(Node** plist, double value) {
 }
 
 double popStack(Node** plist) {
-  double delete;
+  double delete = 0.0;
   if (*plist) {
     Node* tmp = *plist;
     delete = tmp->value;

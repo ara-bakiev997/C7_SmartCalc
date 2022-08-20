@@ -80,7 +80,7 @@ void MainWindow::calculate() {
       ui->result->setText("ERROR");
       ui->string->setText("");
     } else {
-      value = QString::number(result, 'g', 20);
+      value = QString::number(result, 'g', 16);
       ui->result->setText(value);
       ui->string->setText("");
     }
@@ -136,6 +136,7 @@ void MainWindow::on_pushButton_clicked()
                  ui->string->setText("");
                } else {
                  y.push_back(Y);
+                 ui->result->setText("");
                }
            }
            ui->widget->addGraph();

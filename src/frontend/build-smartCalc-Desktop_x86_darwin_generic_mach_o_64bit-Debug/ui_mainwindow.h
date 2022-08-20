@@ -487,7 +487,7 @@ public:
 "\n"
 "background-color : white;"));
         string->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        string->setReadOnly(false);
+        string->setReadOnly(true);
 
         gridLayout->addWidget(string, 0, 0, 1, 5);
 
@@ -501,12 +501,13 @@ public:
 "\n"
 "background-color : white;"));
         result->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        result->setReadOnly(true);
 
         gridLayout->addWidget(result, 1, 0, 1, 5);
 
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(412, 300, 351, 37));
+        layoutWidget1->setGeometry(QRect(412, 300, 363, 37));
         horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -528,7 +529,9 @@ public:
         doubleSpinBox_Xmin = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox_Xmin->setObjectName(QString::fromUtf8("doubleSpinBox_Xmin"));
         doubleSpinBox_Xmin->setStyleSheet(QString::fromUtf8("font: 13pt \".AppleSystemUIFont\";"));
-        doubleSpinBox_Xmin->setMinimum(-999.000000000000000);
+        doubleSpinBox_Xmin->setMinimum(-1000.000000000000000);
+        doubleSpinBox_Xmin->setMaximum(1000.000000000000000);
+        doubleSpinBox_Xmin->setValue(-10.000000000000000);
 
         horizontalLayout_2->addWidget(doubleSpinBox_Xmin);
 
@@ -545,7 +548,9 @@ public:
         doubleSpinBox_Xmax = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox_Xmax->setObjectName(QString::fromUtf8("doubleSpinBox_Xmax"));
         doubleSpinBox_Xmax->setStyleSheet(QString::fromUtf8("font: 13pt \".AppleSystemUIFont\";"));
-        doubleSpinBox_Xmax->setMinimum(-999.000000000000000);
+        doubleSpinBox_Xmax->setMinimum(-1000.000000000000000);
+        doubleSpinBox_Xmax->setMaximum(1000.000000000000000);
+        doubleSpinBox_Xmax->setValue(10.000000000000000);
 
         horizontalLayout->addWidget(doubleSpinBox_Xmax);
 
