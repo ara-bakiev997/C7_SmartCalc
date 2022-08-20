@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/tysaneno/Desktop/My_projects/C/Project N6/C7_SmartCalc_v1.0-0/src'
 rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.html *.css test report smartcalc_test.c *.cfg *a.out *.dSYM
 cc    -c -o s21_*.o s21_smartcalc.c
