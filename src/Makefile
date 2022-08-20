@@ -1122,7 +1122,7 @@ uninstall: uninstall_target  FORCE
 FORCE:
 
 clean_back:
-	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c
+	rm -rf *.o *.a *.so *.gcda *.gcno *.gch rep.info *.css test report *.cfg *a.out *.dSYM test_calc.c smartCalc.app
 
 
 dvi: 
